@@ -1,0 +1,35 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+
+    .formikInput{
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+        label{
+
+        }
+          input,textarea{
+            width: 100%;
+            padding: 20px 15px;
+            border-radius: 16px;
+            border: solid 1px #efefef;
+            color: grey;
+            transition: all .5s;
+            &:focus{
+              border-color: $secondaryColor;
+              outline: 0;
+            }
+          }
+    }
+
+    .formBtn{
+        width: 100%;
+        display: flex;
+        button{
+            width: 100%;
+        }
+    }
+   
+}

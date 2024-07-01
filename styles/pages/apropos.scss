@@ -1,0 +1,69 @@
+/* A propos */
+.home-about {
+  z-index: 22222222222;
+  padding: 200px 0;
+  width: 90%;
+  color: white;
+  position: relative;
+  // &::after{
+  //   content: '';
+  //   position: absolute;
+  //  background-color: var(--secondaryColor);
+  //  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+  //  top: 0;
+  //   height: 100vh;
+  //   width: 100%;
+  //   // z-index: 222222;
+  //   z-index: -1;
+  //   left: 0;
+  // }
+  &>div{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  // background-color: var(--primaryColor);
+}
+.abp-Text {
+  color: var(--secondaryColor);
+  margin: 20px 0 20px 0;
+  width: 45%;
+  p {
+    line-height: 30px;
+    font-size: 15px;
+  }
+}
+
+
+.abpImg {
+  width: 40%;
+  display: flex;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 60%;
+    background-color: var(--secondaryColor);
+    left: -50%;
+    z-index: -1;
+    border-radius: 20px;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='500' height='500' preserveAspectRatio='none' viewBox='0 0 500 500'%3e%3cg mask='url(%26quot%3b%23SvgjsMask4646%26quot%3b)' fill='none'%3e%3cpath d='M274.66 130.54a5.6 5.6 0 1 0-9.96-5.12 5.6 5.6 0 1 0 9.96 5.12zM260.43 123.22a5.6 5.6 0 1 0-9.96-5.12 5.6 5.6 0 1 0 9.96 5.12zM246.2 115.9a5.6 5.6 0 1 0-9.96-5.12 5.6 5.6 0 1 0 9.96 5.12zM231.98 108.59a5.6 5.6 0 1 0-9.96-5.13 5.6 5.6 0 1 0 9.96 5.13zM310.43 130.95a5.6 5.6 0 1 0-9.96-5.12 5.6 5.6 0 1 0 9.96 5.12zM296.21 123.63a5.6 5.6 0 1 0-9.96-5.12 5.6 5.6 0 1 0 9.96 5.12zM281.98 116.31a5.6 5.6 0 1 0-9.96-5.12 5.6 5.6 0 1 0 9.96 5.12zM267.75 108.99a5.6 5.6 0 1 0-9.96-5.12 5.6 5.6 0 1 0 9.96 5.12zM346.21 131.36a5.6 5.6 0 1 0-9.96-5.12 5.6 5.6 0 1 0 9.96 5.12zM331.98 124.04a5.6 5.6 0 1 0-9.96-5.12 5.6 5.6 0 1 0 9.96 5.12zM317.75 116.72a5.6 5.6 0 1 0-9.96-5.12 5.6 5.6 0 1 0 9.96 5.12zM303.52 109.4a5.6 5.6 0 1 0-9.95-5.12 5.6 5.6 0 1 0 9.95 5.12z' stroke='rgba(233%2c 64%2c 87%2c 1)' stroke-width='1.22' stroke-dasharray='3%2c 2'%3e%3c/path%3e%3crect width='321.12' height='321.12' clip-path='url(%26quot%3b%23SvgjsClipPath4647%26quot%3b)' x='-18.57' y='37.88' fill='url(%26quot%3b%23SvgjsPattern4648%26quot%3b)' transform='rotate(182.32%2c 141.99%2c 198.44)'%3e%3c/rect%3e%3cpath d='M107.27 414.44 L194.19 477.58L194.10869079576622 402.63130920423373z' fill='rgba(233%2c 64%2c 87%2c 1)'%3e%3c/path%3e%3crect width='108.6' height='108.6' clip-path='url(%26quot%3b%23SvgjsClipPath4649%26quot%3b)' x='-50.99' y='393.31' fill='url(%26quot%3b%23SvgjsPattern4650%26quot%3b)' transform='rotate(16.46%2c 3.31%2c 447.61)'%3e%3c/rect%3e%3crect width='221.04' height='221.04' clip-path='url(%26quot%3b%23SvgjsClipPath4651%26quot%3b)' x='199.27' y='360.16' fill='url(%26quot%3b%23SvgjsPattern4652%26quot%3b)' transform='rotate(97.44%2c 309.79%2c 470.68)'%3e%3c/rect%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask4646'%3e%3crect width='500' height='500' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cpattern x='0' y='0' width='8.92' height='8.92' patternUnits='userSpaceOnUse' id='SvgjsPattern4648'%3e%3cpath d='M4.46 1L4.46 7.92M1 4.46L7.92 4.46' stroke='rgba(233%2c 64%2c 87%2c 1)' fill='none' stroke-width='2.71'%3e%3c/path%3e%3c/pattern%3e%3cclipPath id='SvgjsClipPath4647'%3e%3ccircle r='80.28' cx='141.99' cy='198.44'%3e%3c/circle%3e%3c/clipPath%3e%3cpattern x='0' y='0' width='10.86' height='10.86' patternUnits='userSpaceOnUse' id='SvgjsPattern4650'%3e%3cpath d='M5.43 1L5.43 9.86M1 5.43L9.86 5.43' stroke='rgba(242%2c 113%2c 33%2c 1)' fill='none' stroke-width='1'%3e%3c/path%3e%3c/pattern%3e%3cclipPath id='SvgjsClipPath4649'%3e%3ccircle r='27.15' cx='3.31' cy='447.61'%3e%3c/circle%3e%3c/clipPath%3e%3cpattern x='0' y='0' width='12.28' height='12.28' patternUnits='userSpaceOnUse' id='SvgjsPattern4652'%3e%3cpath d='M0 12.28L6.14 0L12.28 12.28' stroke='rgba(233%2c 64%2c 87%2c 1)' fill='none'%3e%3c/path%3e%3c/pattern%3e%3cclipPath id='SvgjsClipPath4651'%3e%3ccircle r='55.26' cx='309.79' cy='470.68'%3e%3c/circle%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+  }
+  img {
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 512px) {
+  .abp-Text {
+    width: 90%;
+    margin-top: 50px;
+  }
+  .abpImg {
+    margin: auto;
+    width: 90%;
+  }
+}

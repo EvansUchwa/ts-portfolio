@@ -1,0 +1,174 @@
+$primaryColor: #9C6E5B;
+$secondaryColor: #121A33;
+ 
+h1,.partTitle{
+  margin-bottom: 25px;
+  position: relative;
+}
+
+/*  */
+.fixedAsideNav {
+  width: 60px;
+  height: 60px;
+  border-radius: 80px;
+  background-color: var(--primaryColor);
+  cursor: pointer;
+  box-shadow: black 0px 1px 3px, black 0px 1px 2px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999999999999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: white;
+}
+
+/*  */
+
+.container { 
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.containerHided {
+  height: 100vh;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--secondaryColor);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1000;
+}
+.chNavLink {
+  margin: 75px auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+ flex-wrap: wrap;
+ span {
+  display: flex;
+  font-weight: bold;
+  color: white;
+  padding: 20px;
+  font-size: 3vh;
+  &:hover {
+    color: var(--primaryColor);
+  }
+  cursor: pointer;
+}
+}
+.containerVisible {
+  z-index: 10100000;
+  width: 100%;
+  background-color: white;
+  transition: all 0.7s ease 0.1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+  transform-origin: 0 100%;
+}
+.containerVisibleRotate {
+  transform: rotate(30deg) scale(0.8);
+  border-radius: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 10vh;
+  a {
+    color: white;
+  }
+}
+/* Debut partie logo */
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  a {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    color: var(--primaryColor) !important;
+    font-weight: bold;
+    font-size: 30px;
+  }
+}
+/* Fin logo */
+
+/*  */
+.navBtn {
+  color: white;
+}
+.asideNavActive {
+  color: var(--secondaryColor) !important;
+  position: relative;
+  transition: all 0.5s;
+}
+aside a {
+  color: white;
+}
+.asideNavActive::after {
+  content: "";
+  top: 50%;
+  left: -15px;
+  transform: translateY(-50%);
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  background-color: var(--secondaryColor);
+}
+
+
+@media screen and (max-width: 512px) {
+
+}
+
+
+.btnStyle {
+      background-color: var(--primaryColor);
+      margin-top: 10px;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 50px;
+      &:hover {
+        border: solid 1px var(--primaryColor);
+        background-color: transparent;
+        color: var(--primaryColor);
+      }
+      &.btnOulineStyle {
+        background-color: transparent;
+        border: solid 1px var(--primaryColor);
+        color:  var(--primaryColor);
+        padding: 10px 25px;
+        border-radius: 50px;
+        &:hover {
+          background-color: var(--primaryColor);
+          color: white;
+        }
+      }
+}
+
+  h1.sectionTitle{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    sup{
+      white-space: nowrap;
+      position: absolute;
+      color: #9C6E5B30;
+      font-size: 60px;
+      width: 120%;
+      left: 0;
+      top: -50%;
+    }
+  }

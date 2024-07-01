@@ -1,0 +1,138 @@
+.home {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondaryColor);
+  width: 100%;
+  &>div{
+
+  }
+  &>div:not(.home-banner){
+    h1{
+      margin-bottom: 25px;
+      color: var(--primaryColor);
+    }
+  }
+  .home-banner{
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+  }
+  .hb-presentation {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    
+    &::after{
+      content: '';
+      position: absolute;
+      background-color: rgba($color: white, $alpha: 0.5);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+
+      height: 100%;
+      width: 100%;
+    }
+    &>section {
+      width: 50%;
+      z-index: 21;
+    }
+    .hbp-text{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 25px 0;
+  
+      
+      h1,b,section{
+        width: 90%;
+        margin: 0;
+      }
+      h1 {
+        font-size: 8vh;
+        margin-bottom: 25px;
+      }
+      b {
+        font-size: 5vh;
+      }
+    }
+    .hbp-image{
+      
+      height: 100vh;
+      // overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      &::after{
+        content: '';
+        position: absolute;
+       background-color: var(--secondaryColor);
+       clip-path: polygon(50% 0, 100% 0, 100% 80%, 0% 100%);
+        height: 140vh;
+        width: 70vw;
+        z-index: -1;
+        right: 0;
+      }
+      img {
+        background-color: var(--primaryColor);
+        margin: auto;
+        width: 80%;
+        border-radius: 50px;
+        height: 90%;
+        transform: rotate(-4deg);
+        cursor: pointer;
+        transition: all .5s;
+        &:hover{
+          transform: initial;
+        }
+        // object-position: 0% 20%;
+      }
+    }
+  
+
+  }
+  .hpp-contactBtn {
+    display: flex;
+   gap: 0 20px;
+  }
+  
+}
+
+
+
+
+
+
+@media screen and (max-width: 512px) {
+  .hpp-contactBtn a {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+  .hb-presentation {
+    // flex-direction: column-reverse;
+    &>section {
+      width: 100% !important;
+    }
+    .hbp-text{
+   order: 2;
+    }
+    .hbp-image{
+      order: 1;
+      height: 60vh !important;
+      &::after{
+       background-color: transparent !important;
+      }
+      img {
+        
+      }
+    }
+  }
+}
