@@ -18,9 +18,11 @@ const HomeSkills = () => {
     { name: "Vercel", icon: "vercel" },
     { name: "Heroku", icon: "heroku" },
   ];
+
   return (
     <div className="home-skill">
       <SectionTitle title={"Mes outils"} />
+
       <div className="skillList">
         {techno.map((item, i) => (
           <article key={"techno nb" + i}>

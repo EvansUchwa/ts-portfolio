@@ -25,3 +25,13 @@ export type WorkType = {
     link: string,
     technos: string[],
 }
+
+export type CustomSelectOptionType = {
+    label: string;
+    value: string;
+};
+export type CustomSelectPropsType = {
+    chooseLabel: string;
+    options: CustomSelectOptionType[];
+    afterChange: Function;
+};

@@ -17,7 +17,6 @@ import { contactFormFields } from "@/helpers/form/fieldsArrays";
 import FormikFieldProvider from "@/uikits/form";
 import { FormBtn } from "@/uikits/buttons";
 import { ContactValidation } from "@/helpers/form/validations";
-// import ConfettiExplosion from "react-confetti-explosion";
 import { toast } from "sonner";
 
 const HomeContact = () => {
@@ -103,15 +102,6 @@ const HomeContact = () => {
 
       {messageSent ? (
         <>
-          {/* {!hideConfetti && (
-            <ConfettiExplosion
-              duration={3000}
-              particleCount={800}
-              zIndex={100000000000}
-              width={2000}
-              onComplete={() => setHC(true)}
-            />
-          )} */}
           <section className="cp-messageSent">
             <IcBaselineFactCheck />
             <h2>Merci beaucoup pour votre prise de contact !</h2>

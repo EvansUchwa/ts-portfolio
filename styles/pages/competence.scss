@@ -20,9 +20,12 @@
       background-color: var(--secondaryColor);
       padding: 10px 15px;
       border-radius: 10px;
-      filter: grayscale(200) blur(2px);
+      filter: grayscale(600);
+      opacity: 0.5;
       transition: all .5s;
+      color: grey;
       &:hover{
+        opacity: 1;
         filter: none;
         background-color: var(--secondaryColor);
       }

@@ -1,6 +1,29 @@
 $primaryColor: #9C6E5B;
 $secondaryColor: #121A33;
  
+::selection {
+  color: none;
+  background: none;
+}
+/* For Mozilla Firefox */
+::-moz-selection {
+  color: none;
+  background: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
+  }
+  ::-webkit-scrollbar-track-piece  {
+  background-color: $secondaryColor;
+  }
+  ::-webkit-scrollbar-thumb:vertical {
+  height: 10px;
+  background-color: $primaryColor;
+  }
+
 h1,.partTitle{
   margin-bottom: 25px;
   position: relative;
@@ -138,8 +161,10 @@ aside a {
       background-color: var(--primaryColor);
       margin-top: 10px;
       color: white;
-      padding: 10px 25px;
+      padding: 16px 35px;
       border-radius: 50px;
+      display: flex;
+      align-items: center;
       &:hover {
         border: solid 1px var(--primaryColor);
         background-color: transparent;

@@ -1,11 +1,14 @@
 "use client";
 import { works } from "@/helpers/rawdata";
-import { LinkButton, SectionTitle } from "../../uikits/other";
+import { CustomSelect, LinkButton, SectionTitle } from "../../uikits/other";
 import Slider from "react-slick";
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import { technosIcons } from "@/helpers/others";
 
 const HomeWorks = () => {
+  const [iWorks, setiW] = useState([]);
+  const [finalWorks, setFW] = useState(works);
+
   const settings = {
     dots: true,
     arrows: false,
@@ -20,13 +23,37 @@ const HomeWorks = () => {
     },
   };
 
+  function handleChange(selected: string) {
+    if (selected != "all") {
+      let filter = works.filter((item) => item.technos.includes(selected));
+      if (filter && filter.length > 0) {
+        setFW(filter);
+      }
+    } else {
+      setFW(works);
+    }
+    document.querySelector(".wp-workList")?.scrollIntoView();
+  }
+
   return (
     <div className="home-work">
       <SectionTitle title="Mes travaux" />
-
+      <section>
+        <CustomSelect
+          chooseLabel={"Filtrer par techno"}
+          options={[
+            { label: "Javascript(React Js)", value: "react" },
+            { label: "Javascript(Next Js)", value: "next" },
+            { label: "Typescript(Next Js)", value: "ts" },
+            { label: "Node Js", value: "node" },
+            { label: "Toutes les technos", value: "all" },
+          ]}
+          afterChange={handleChange}
+        />
+      </section>
       <div className="wp-workList">
         <Slider {...settings}>
-          {works.map((item, i) => (
+          {finalWorks.map((item, i) => (
             <div key={"work nb " + i} className="workCardContainer">
               <article className="workCard">
                 <img src={"/img/" + item.img} alt="random" />

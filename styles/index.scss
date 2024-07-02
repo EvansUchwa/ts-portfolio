@@ -14,29 +14,9 @@
    --primaryColor: #9C6E5B;
   --pbcD1: #121A33;
   --secondaryColor: #121A33; 
-  --color3: #cdd1cc;
-  --color4: #6e6d6e;
   --ob2: rgba(0, 0, 0, 0.2);
   --ob4: rgba(0, 0, 0, 0.4);
   --ob6: rgba(0, 0, 0, 0.6);
-  --ob8: rgba(0, 0, 0, 0.8);
-  --ob10: rgba(0, 0, 0, 1);
-
-  --ow2: rgba(255, 255, 255, 0.2);
-  --ow4: rgba(255, 255, 255, 0.4);
-  --ow6: rgba(255, 255, 255, 0.6);
-  --ow8: rgba(255, 255, 255, 0.8);
-  --ow10: rgba(255, 255, 255, 1);
-
-  --cwd1: #f2f2f2;
-  --cwd2: #e6e6e6;
-  --cwd3: #d9d9d9;
-  --cwd4: #cccccc;
-
-  --cbd1: #0d0d0d;
-  --cbd2: #1a1a1a;
-  --cbd3: #262626;
-  --cbd4: #333333;
 }
 
 * {
@@ -85,14 +65,14 @@ textarea {
   border: none;
 }
 .colorDisabled {
-  color: var(--color4) !important;
+  color: grey;
 }
 
 /* POur les button du site */
 button {
   background-color: var(--primaryColor);
   color: white;
-  padding: 15px 30px;
+  padding: 25px 40px;
   position: relative;
   transition: all 0.2s;
   border-radius: 50px;

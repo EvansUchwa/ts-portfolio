@@ -1,4 +1,10 @@
 import { WorkType } from "@/types/others";
+import {
+    type Container,
+    type ISourceOptions,
+    MoveDirection,
+    OutMode,
+} from "@tsparticles/engine";
 
 export const works: WorkType[] = [
     {
@@ -43,8 +49,8 @@ export const works: WorkType[] = [
     },
     {
         name: "BNEX",
-        description: "site vitrine pour une boite local.",
-        img: "hiretop.webp",
+        description: "Un site vitrine pour une boite local.",
+        img: "bnex.webp",
         link: "https://jose-bnex.vercel.app/",
         technos: ["next", "ts", "sass", "vercel"],
     },
@@ -111,3 +117,72 @@ export const works: WorkType[] = [
         technos: ["html", "css", "vercel"],
     },
 ];
+
+
+export const particleOption = {
+    background: {
+        color: {
+            value: "transparent",
+        },
+    },
+    fpsLimit: 60,
+    interactivity: {
+        events: {
+            onClick: {
+                enable: true,
+                mode: "push",
+            },
+            onHover: {
+                enable: true,
+                mode: "repulse",
+            },
+        },
+        modes: {
+            push: {
+                quantity: 4,
+            },
+            repulse: {
+                distance: 200,
+                duration: 0.4,
+            },
+        },
+    },
+    particles: {
+        color: {
+            value: "#121A33",
+        },
+        links: {
+            color: "#9C6E5B",
+            distance: 150,
+            enable: true,
+            opacity: 0.5,
+            width: 1,
+        },
+        move: {
+            direction: MoveDirection.none,
+            enable: true,
+            outModes: {
+                default: OutMode.out,
+            },
+            random: false,
+            speed: 1,
+            straight: false,
+        },
+        number: {
+            density: {
+                enable: true,
+            },
+            value: 70,
+        },
+        opacity: {
+            value: 0.8,
+        },
+        shape: {
+            type: "circle",
+        },
+        size: {
+            value: { min: 1, max: 5 },
+        },
+    },
+    detectRetina: true,
+}
