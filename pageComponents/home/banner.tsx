@@ -67,7 +67,7 @@ const HomeBanner = () => {
               text={"Mon CV"}
               isOutline={true}
               target="_blank"
-              link={"/cv.pdf"}
+              link={process.env.resumeUrl!}
             />
           </section>
         </section>
