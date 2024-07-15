@@ -5,6 +5,10 @@ import "../styles/slick.min.css";
 import { AsideNav } from "@/uikits/Nav";
 import Footer from "@/uikits/footer";
 import { Toaster } from "sonner";
+import {
+  GoogleTranslate,
+  getPrefLangCookie,
+} from "@/pageComponents/others/googleTranslate";
 const inter = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "900"],
@@ -24,6 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Toaster richColors={true} />
+        <GoogleTranslate />
         <div className="container">
           <AsideNav />
           <div className="containerVisible">

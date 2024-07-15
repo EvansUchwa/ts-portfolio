@@ -45,15 +45,17 @@ const HomeBanner = () => {
             <h1>Evans Djossouvi</h1>
             <b>
               Développeur Web <br />{" "}
-              <Typewriter
-                words={["Front-end", "Back-end"]}
-                loop={false}
-                cursor
-                cursorStyle="</>"
-                typeSpeed={250}
-                deleteSpeed={80}
-                delaySpeed={1000}
-              />
+              <span className="notranslate">
+                <Typewriter
+                  words={["Front-end", "Back-end"]}
+                  loop={false}
+                  cursor
+                  cursorStyle="<>"
+                  typeSpeed={250}
+                  deleteSpeed={80}
+                  delaySpeed={1000}
+                />
+              </span>
               .
             </b>
           </section>

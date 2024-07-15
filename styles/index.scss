@@ -72,7 +72,7 @@ textarea {
 button {
   background-color: var(--primaryColor);
   color: white;
-  padding: 25px 40px;
+  padding: 15px 30px;
   position: relative;
   transition: all 0.2s;
   border-radius: 50px;
@@ -127,3 +127,54 @@ footer{
   padding: 10px 20px;
   // overflow: hidden;
 }
+body { 
+  position: static;
+   top: 0px !important;
+   }
+iframe.skiptranslate { 
+  display: none !important;
+ }
+
+ .skiptranslate { 
+  display: none !important;
+  &~div:nth-child(25){
+    // background-color: gold;
+    &>div{   
+      // background-color: green;
+      svg{
+        display: none !important;
+        opacity: 0 !important;
+      }
+    }
+  }
+ }
+
+ #langSelector{
+  padding: 10px;
+  border-radius: 20px;
+  
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  background-color: rgba($color: $primaryColor, $alpha: 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-box-shadow: 3px 3px 10px 3px transparentize($color: #4d4848, $amount: 0.1);
+-moz-box-shadow: 3px 3px 10px 3px transparentize($color: #4d4848, $amount: 0.1);
+box-shadow: 3px 3px 10px 3px transparentize($color: #4d4848, $amount: 0.1);
+  z-index: 90000000000;
+  display: flex;
+  gap: 0 10px;
+  cursor: pointer;
+  span{
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #efefef;
+    transition: all .5s ease-in-out;
+    &.isActive{
+      background-color: $primaryColor;
+      color: white;
+    }
+  }
+ }

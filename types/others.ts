@@ -35,3 +35,12 @@ export type CustomSelectPropsType = {
     options: CustomSelectOptionType[];
     afterChange: Function;
 };
+
+export type LanguageSelectorPropsType = {
+    onChange: Function,
+    value: string
+}
+
+export type GoogleTranslatePropsType = {
+    prefLangCookie: string
+}

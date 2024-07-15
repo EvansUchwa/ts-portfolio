@@ -11,8 +11,10 @@
   "dependencies": {
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.4.0",
+    "@types/google-translate-api": "^2.3.5",
     "@types/react-slick": "^0.23.13",
     "axios": "^1.7.2",
+    "cookies-next": "^4.2.1",
     "formik": "^2.4.6",
     "next": "14.2.4",
     "node-mailjet": "^6.0.5",

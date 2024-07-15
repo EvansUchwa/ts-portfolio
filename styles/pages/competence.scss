@@ -12,13 +12,15 @@
     justify-content: space-evenly;
     gap: 20px;
     article{
+      min-width: 20%;
+      max-width: 35%;
       cursor: pointer;
       display: flex;
       align-items: center;
-      justify-content: center;
+      // justify-content: center;
       gap: 0 10px;
       background-color: var(--secondaryColor);
-      padding: 10px 15px;
+      padding: 5px 10px;
       border-radius: 10px;
       filter: grayscale(600);
       opacity: 0.5;
@@ -31,6 +33,7 @@
       }
       svg{
         font-size: 50px;
+        width: 20%;
       }
       b{
         font-size: 30px;
@@ -43,9 +46,9 @@
   .home-skill {
     .skillList{
       padding: 10px;
-     
       article{
-        padding: 6px 15px;
+        max-width: 48%;
+        // padding: 6px 15px;
         svg{
           font-size: 20px;
         }
