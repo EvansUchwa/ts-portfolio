@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "../styles/index.scss";
 import "../styles/slick.min.css";
 import { AsideNav } from "@/uikits/Nav";
@@ -9,7 +9,7 @@ import {
   GoogleTranslate,
   getPrefLangCookie,
 } from "@/pageComponents/others/googleTranslate";
-const inter = Montserrat({
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "900"],
 });
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <Toaster richColors={true} />
         <GoogleTranslate />
         <div className="container">

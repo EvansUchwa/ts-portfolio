@@ -45,7 +45,7 @@ const HomeBanner = () => {
             <h1>Evans Djossouvi</h1>
             <b>
               Développeur Web <br />{" "}
-              <span className="notranslate">
+              <strong className="notranslate">
                 <Typewriter
                   words={["Front-end", "Back-end"]}
                   loop={false}
@@ -55,7 +55,7 @@ const HomeBanner = () => {
                   deleteSpeed={80}
                   delaySpeed={1000}
                 />
-              </span>
+              </strong>
               .
             </b>
           </section>
