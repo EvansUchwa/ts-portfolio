@@ -17,6 +17,10 @@ export default function Home() {
       customCursor.classList.add("customCursorInit");
       isCursorInited = true;
     }
+    function destroyCursor() {
+      customCursor.classList.remove("customCursorInit");
+      isCursorInited = false;
+    }
 
     let allLinks = document.querySelectorAll("a,.navBtn,button");
 
@@ -42,6 +46,8 @@ export default function Home() {
       }
       customCursor.style.cssText = `translate: ${mouseX}px ${mouseY}px`;
     });
+
+    document.addEventListener("mouseout", destroyCursor);
   }, []);
   return (
     <div className="home">
