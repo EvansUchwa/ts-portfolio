@@ -37,30 +37,51 @@ form{
 
 .customSelect{
   position: relative;
-  background-color: $primaryColor;
+  background-color: white;
+  border: solid 2px $primaryColor;
+  color: $primaryColor;
   border-radius: 10px;
   z-index: 900000;
   cursor: pointer;
+  min-width: 60vw;
+  display: flex;
+  justify-content: center;
+  &.customSelectOptionsVisible{
+    color: $secondaryColor;
+  }
   p{
-    width: 100%;
-    padding: 0 30px;
-    opacity: 0.5;
+    width: 98%;
+    padding: 10px 30px;
+    margin: 0;
     z-index: 900000;
+    font-weight: bold;
+    border-bottom: solid 1px #efefef;
+    text-align: center;
   }
   ul{
+    border: solid 2px $primaryColor;
+    border-top: 0;
+    z-index: 800000;
     padding-top: 10px;
-    background-color:  $primaryColor;
+    background-color:  white;
     position: absolute;
-    width: 100%;
+    width: 100.5%;
     top: calc(100% - 10px);
+    left: 50%;
+    transform: translateX(-50%);
     list-style: none;
-    padding: 0;
+    padding: 10px  0 0 0;
     margin: 0;
     border-radius: 0 0 10px 10px;
     li{
+      margin: 0;
       padding: 10px 30px;
+      &:hover{
+        color: $primaryColor;
+      }
       &.selected {
-        background-color: $secondaryColor !important;
+        background-color: $primaryColor !important;
+        color: white;
       }
     }
   }

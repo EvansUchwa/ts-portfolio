@@ -5,10 +5,7 @@ import "../styles/slick.min.css";
 import { AsideNav } from "@/uikits/Nav";
 import Footer from "@/uikits/footer";
 import { Toaster } from "sonner";
-import {
-  GoogleTranslate,
-  getPrefLangCookie,
-} from "@/pageComponents/others/googleTranslate";
+import { GoogleTranslate } from "@/pageComponents/others/googleTranslate";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "900"],
@@ -36,6 +33,8 @@ export default function RootLayout({
             <Footer />
           </div>
         </div>
+
+        <div className="customCursor"></div>
       </body>
     </html>
   );

@@ -7,9 +7,6 @@
   justify-content: center;
   color: var(--secondaryColor);
   width: 100%;
-  &>div{
-
-  }
   &>div:not(.home-banner){
     h1{
       margin-bottom: 25px;
@@ -36,7 +33,6 @@
       background-color: rgba($color: white, $alpha: 0.5);
       -webkit-backdrop-filter: blur(5px);
       backdrop-filter: blur(5px);
-
       height: 100%;
       width: 100%;
     }
@@ -50,14 +46,13 @@
       justify-content: center;
       align-items: center;
       gap: 25px 0;
-  
       
       h1,b,section{
         width: 90%;
         margin: 0;
       }
       h1 {
-        font-size: 10vh;
+        font-size:8vh;
         margin-bottom: 25px;
       }
       b {
@@ -65,9 +60,7 @@
       }
     }
     .hbp-image{
-      
       height: 100vh;
-      // overflow: hidden;
       position: relative;
       display: flex;
       justify-content: center;
@@ -96,19 +89,12 @@
         // object-position: 0% 20%;
       }
     }
-  
-
   }
   .hpp-contactBtn {
     display: flex;
    gap: 0 20px;
   }
-  
 }
-
-
-
-
 
 
 @media screen and (max-width: 512px) {

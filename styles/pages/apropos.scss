@@ -1,7 +1,7 @@
 /* A propos */
 .home-about {
   z-index: 22222222222;
-  padding: 200px 0;
+  margin: 150px auto;
   width: 90%;
   color: white;
   position: relative;
@@ -53,7 +53,7 @@
 }
 @media screen and (max-width: 512px) {
   .home-about {
-    padding: 100px 0;
+    margin: 100px 0;
   }
   .abp-Text {
     width: 90%;

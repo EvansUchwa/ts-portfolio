@@ -5,11 +5,49 @@ $secondaryColor: #121A33;
   color: none;
   background: none;
 }
+
 /* For Mozilla Firefox */
 ::-moz-selection {
   color: none;
   background: none;
 }
+
+*{
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: none;
+}
+.customCursor{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 80px;
+  margin-left: -25px;
+  margin-top: -25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: $primaryColor;
+  transition-property: transform, scale, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+  scale: 0.3;
+  z-index: 999999999999999999;
+  &.customCursorInit{
+    opacity: 1;
+  }
+  &.customCursorHoveredLink{
+    transform: scale(2);
+  }
+}
+
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -89,7 +127,7 @@ h1,.partTitle{
   &:hover {
     color: var(--primaryColor);
   }
-  cursor: pointer;
+  // cursor: pointer;
 }
 }
 .containerVisible {
@@ -137,9 +175,11 @@ h1,.partTitle{
 }
 /* Fin logo */
 
+
 /*  */
 .navBtn {
   color: white;
+  transition: all .5s;
 }
 .asideNavActive {
   color: var(--secondaryColor) !important;
@@ -161,11 +201,6 @@ aside a {
 }
 
 
-@media screen and (max-width: 512px) {
-
-}
-
-
 .btnStyle {
       background-color: var(--primaryColor);
       margin-top: 10px;
@@ -174,14 +209,17 @@ aside a {
       border-radius: 50px;
       display: flex;
       align-items: center;
+      border: solid 1px transparent;
+
       &:hover {
-        border: solid 1px var(--primaryColor);
+       border-color:  $primaryColor;
+
         background-color: transparent;
         color: var(--primaryColor);
       }
       &.btnOulineStyle {
         background-color: transparent;
-        border: solid 1px var(--primaryColor);
+        border-color: $primaryColor;
         color:  var(--primaryColor);
         padding: 10px 25px;
         border-radius: 50px;

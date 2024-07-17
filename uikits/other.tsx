@@ -61,10 +61,11 @@ export function CustomSelect({
     }
   }, [currentOption]);
   return (
-    <div className="customSelect">
-      {/* <p onClick={() => setOV((prev) => !prev)}>
-        {currentOption ? options[currentOptionId].label : chooseLabel}{" "}
-      </p> */}
+    <div
+      className={
+        "customSelect " + (optionsVisible ? " customSelectOptionsVisible " : "")
+      }
+    >
       <p onClick={() => setOV((prev) => !prev)}>
         {chooseLabel +
           (currentOption ? ": " + options[currentOptionId].label : "")}

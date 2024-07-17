@@ -40,7 +40,7 @@ const HomeWorks = () => {
       <SectionTitle title="Mes travaux" />
       <section>
         <CustomSelect
-          chooseLabel={"Filtrer par techno"}
+          chooseLabel={"Filtre par techno"}
           options={[
             { label: "Javascript(React Js)", value: "react" },
             { label: "Javascript(Next Js)", value: "next" },
@@ -55,8 +55,12 @@ const HomeWorks = () => {
         <Slider {...settings}>
           {finalWorks.map((item, i) => (
             <div key={"work nb " + i} className="workCardContainer">
-              <article className="workCard">
-                <img src={"/img/" + item.img} alt="random" />
+              <article
+                className="workCard"
+                style={{
+                  backgroundImage: "url(" + "/img/" + item.img + ")",
+                }}
+              >
                 <section>
                   <img src={"/img/" + item.img} alt="random" />
                   <h3>{item.name}</h3>

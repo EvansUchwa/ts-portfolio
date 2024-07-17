@@ -2,6 +2,8 @@
 .home-skill {
   width: 90%;
   color: white;
+  // margin: 150px auto;
+  margin-bottom: 150px;
   .skillList{
     padding: 20px;
     border-radius: 20px;
@@ -14,10 +16,9 @@
     article{
       min-width: 20%;
       max-width: 35%;
-      cursor: pointer;
+      // cursor: pointer;
       display: flex;
       align-items: center;
-      // justify-content: center;
       gap: 0 10px;
       background-color: var(--secondaryColor);
       padding: 5px 10px;
@@ -44,6 +45,7 @@
 
 @media screen and (max-width: 512px) {
   .home-skill {
+    margin-bottom: 100px;
     .skillList{
       padding: 10px;
       article{
