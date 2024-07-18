@@ -34,10 +34,7 @@ export default function RootLayout({
         <meta property="og:url" content="https://evansdjossouvi.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Home | Evans Djossouvi" />
-        <meta
-          property="og:image"
-          content="https://evansdjossouvi.com/images/your-image.png"
-        />
+        <meta property="og:image" content="/logo.png" />
         <meta
           property="og:description"
           content="Evans Djossouvi is a Fullstack Developer with expertise in modern web technologies including React.js, Node.js, Next.js, and Capacitor. Specializing in  SaaS applications, Evans creates powerful and scalable solutions for your business needs."
