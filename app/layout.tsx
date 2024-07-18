@@ -23,7 +23,11 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://evansdjossouvi.com/",
     siteName: "Evans Djossouvi",
-    images: ["/logo.PNG"],
+    images: [
+      {
+        url: "/logo.PNG",
+      },
+    ],
   },
   keywords: [
     "Fullstack Developer",
