@@ -134,6 +134,8 @@
     position: absolute;
     left: 50%;
     bottom: -50px;
+    margin: 0;
+    padding: 0;
     transform: translateX(-50%);
 }
 .slick-dots li{

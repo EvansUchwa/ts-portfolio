@@ -40,15 +40,14 @@ $secondaryColor: #121A33;
     a{
       margin: 5px 0;
       border-radius: 5px;
-      border: solid 1px white;
       color: white;
-
+      background-color: $primaryColor;
       width: 40px;
         height: 40px;
-        line-height: 45px;
-        text-align: center;
         border-radius: 100%;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
   }
   div{
@@ -69,11 +68,14 @@ $secondaryColor: #121A33;
         font-size: 20px;
         width: 40px;
         height: 40px;
-        line-height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-radius: 100%;
         background-color: white;
         color: var(--primaryColor);
         margin-right: 15px;
+
       }
     }
  

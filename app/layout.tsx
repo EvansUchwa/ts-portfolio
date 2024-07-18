@@ -14,6 +14,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Evans Djossouvi-Portfolio",
   description: "DÉVELOPPEUR FULL-STACK JS",
+  icons: "/logo.ico",
 };
 
 export default function RootLayout({

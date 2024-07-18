@@ -8,6 +8,7 @@ import {
   IcBaselineWhatsapp,
   IcOutlineMail,
   MdiGithub,
+  MdiLinkedin,
 } from "../../uikits/icons";
 import { SectionTitle } from "../../uikits/other";
 import axios from "axios";
@@ -79,13 +80,12 @@ const HomeContact = () => {
             <span>
               <IcBaselineLocalPhone />
             </span>
-            +229 94-67-73-52 /-229 61-16-00-11
+            +229 94677352
           </p>
         </div>
         <section>
           <a href="https://github.com/EvansUchwa">
-            {" "}
-            <MdiGithub />{" "}
+            <MdiGithub />
           </a>
           <a href="mailto:johnsonevans686@gmail.com">
             <IcOutlineMail />
@@ -96,6 +96,13 @@ const HomeContact = () => {
             className=" whatsappColor"
           >
             <IcBaselineWhatsapp />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/evans-djossouvi-5b81101b0"
+            target="_blank"
+            className=" whatsappColor"
+          >
+            <MdiLinkedin />
           </a>
         </section>
       </section>
