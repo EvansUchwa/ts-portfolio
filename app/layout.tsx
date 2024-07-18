@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Evans Djossouvi",
     images: [
       {
-        url: "/logo.PNG",
+        url: "https://evansuchwa.github.io/img-assets/logo-portfolio.PNG",
       },
     ],
   },
