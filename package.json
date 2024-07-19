@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tsparticles/react": "^3.0.0",
-    "@tsparticles/slim": "^3.4.0",
     "@types/google-translate-api": "^2.3.5",
     "@types/react-slick": "^0.23.13",
     "axios": "^1.7.2",
@@ -18,6 +16,7 @@
     "formik": "^2.4.6",
     "next": "14.2.4",
     "node-mailjet": "^6.0.5",
+    "particles-bg": "^2.5.5",
     "react": "^18",
     "react-dom": "^18",
     "react-simple-typewriter": "^5.0.1",

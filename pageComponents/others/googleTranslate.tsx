@@ -3,6 +3,7 @@ import { LanguageSelectorPropsType } from "@/types/others";
 import Script from "next/script";
 import React, { useEffect, useState } from "react";
 import { getCookie, setCookie } from "cookies-next";
+import { useAppLoader } from "@/contexts/loader";
 
 declare global {
   interface Window {
@@ -29,13 +30,36 @@ function googleTranslateElementInit() {
 }
 
 export function GoogleTranslate() {
+  const { setAppLoader } = useAppLoader();
   const [langCookie, setLangCookie] = useState(
     decodeURIComponent(getPrefLangCookie())
   );
 
   useEffect(() => {
+    setAppLoader(true);
+    let timeoutId: string | any | undefined;
     window.googleTranslateElementInit = googleTranslateElementInit;
-  }, []);
+    const observer = new MutationObserver((mutationsList, observer) => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        console.log("Translation completed");
+        observer.disconnect();
+        setAppLoader(false);
+      }, 1000);
+    });
+
+    const targetNode = document.querySelector("html");
+
+    if (targetNode) {
+      observer.observe(targetNode, {
+        attributes: true,
+        childList: true,
+        subtree: true,
+      });
+    }
+
+    return () => observer.disconnect();
+  }, [langCookie]);
 
   const onChange = (value: string) => {
     let lang;
@@ -45,14 +69,13 @@ export function GoogleTranslate() {
     } else {
       lang = "/fr/fr";
     }
-
-    setLangCookie(lang);
     const element = document.querySelector(
       ".goog-te-combo"
     ) as HTMLSelectElement;
 
     element.value = value;
     element.dispatchEvent(new Event("change"));
+    setLangCookie(lang);
   };
 
   return (

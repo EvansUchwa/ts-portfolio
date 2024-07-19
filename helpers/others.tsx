@@ -16,6 +16,7 @@ import {
   SkillIconsDocker,
   SkillIconsNodejsDark,
 } from "@/uikits/icons";
+import { getCookie } from "cookies-next";
 // {
 //     name: 'Stuud',
 //     description: 'En développement- Un mini reseau social pour le partage de cours pour les etudiant',
@@ -70,3 +71,8 @@ export const technosIcons: technosIconType = {
   heroku: <SkillIconsHeroku />,
   node: <SkillIconsNodejsDark />,
 };
+
+export function getResumeLinkFromCookie() {
+  if (getCookie("googtrans")?.endsWith("en")) return "/resumes/en-resume.pdf";
+  return "/resumes/fr-resume.pdf";
+}

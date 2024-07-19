@@ -6,6 +6,8 @@ import { AsideNav } from "@/uikits/Nav";
 import Footer from "@/uikits/footer";
 import { Toaster } from "sonner";
 import { GoogleTranslate } from "@/pageComponents/others/googleTranslate";
+import { AppLoaderContextProvider } from "@/contexts/loader";
+import AppLoader from "@/uikits/loaders";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -48,16 +50,18 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <Toaster richColors={true} />
-        <GoogleTranslate />
-        <div className="container">
-          <AsideNav />
-          <div className="containerVisible">
-            {children}
-            <Footer />
+        <AppLoaderContextProvider>
+          <AppLoader />
+          <GoogleTranslate />
+          <div className="container">
+            <AsideNav />
+            <div className="containerVisible">
+              {children}
+              <Footer />
+            </div>
           </div>
-        </div>
-
-        <div className="customCursor"></div>
+          <div className="customCursor"></div>
+        </AppLoaderContextProvider>
       </body>
     </html>
   );

@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
 import { PhListLight, PhX } from "./icons";
 
 export const AsideNav = () => {
@@ -45,15 +44,5 @@ export const AsideNav = () => {
         {navOpened ? <PhX /> : <PhListLight />}
       </aside>
     </>
-  );
-};
-
-export const TopNav = () => {
-  return (
-    <section className="pageHeader">
-      <div className="logo">
-        <Link href="/">E-Dev.</Link>
-      </div>
-    </section>
   );
 };

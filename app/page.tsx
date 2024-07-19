@@ -5,6 +5,7 @@ import HomeContact from "@/pageComponents/home/contact";
 import HomeSkills from "@/pageComponents/home/skills";
 import HomeWorks from "@/pageComponents/home/works";
 import { useEffect } from "react";
+import ParticlesBg from "particles-bg";
 
 export default function Home() {
   useEffect(() => {
@@ -22,7 +23,7 @@ export default function Home() {
       isCursorInited = false;
     }
 
-    let allLinks = document.querySelectorAll("a,.navBtn,button");
+    let allLinks = document.querySelectorAll("a,font,.navBtn,button");
 
     allLinks.forEach((element) => {
       element.addEventListener("mouseover", (e: Event) => {
@@ -49,13 +50,17 @@ export default function Home() {
 
     document.addEventListener("mouseout", destroyCursor);
   }, []);
+
   return (
-    <div className="home">
-      <HomeBanner />
-      <HomeAbout />
-      <HomeSkills />
-      <HomeWorks />
-      <HomeContact />
-    </div>
+    <>
+      <ParticlesBg type="cobweb" bg={true} color="#121A33" num={50} />
+      <div className="home">
+        <HomeBanner />
+        <HomeAbout />
+        <HomeSkills />
+        <HomeWorks />
+        <HomeContact />
+      </div>
+    </>
   );
 }
