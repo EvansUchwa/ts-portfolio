@@ -4,8 +4,9 @@ import HomeBanner from "@/pageComponents/home/banner";
 import HomeContact from "@/pageComponents/home/contact";
 import HomeSkills from "@/pageComponents/home/skills";
 import HomeWorks from "@/pageComponents/home/works";
+import dynamic from "next/dynamic";
 import { useEffect } from "react";
-import ParticlesBg from "particles-bg";
+const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
 
 export default function Home() {
   useEffect(() => {
@@ -54,6 +55,7 @@ export default function Home() {
   return (
     <>
       <ParticlesBg type="cobweb" bg={true} color="#121A33" num={50} />
+
       <div className="home">
         <HomeBanner />
         <HomeAbout />

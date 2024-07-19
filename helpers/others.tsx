@@ -1,3 +1,4 @@
+"use client";
 import { technosIconType } from "@/types/others";
 import {
   SkillIconsCss,
@@ -75,4 +76,10 @@ export const technosIcons: technosIconType = {
 export function getResumeLinkFromCookie() {
   if (getCookie("googtrans")?.endsWith("en")) return "/resumes/en-resume.pdf";
   return "/resumes/fr-resume.pdf";
+}
+
+export function redirectToResume() {
+  if (typeof window !== "undefined") {
+    return window.open(getResumeLinkFromCookie(), "_blank");
+  }
 }

@@ -1,7 +1,7 @@
 "use client";
 import { Typewriter } from "react-simple-typewriter";
 import { LinkButton } from "../../uikits/other";
-import { getResumeLinkFromCookie } from "@/helpers/others";
+import { redirectToResume } from "@/helpers/others";
 
 const HomeBanner = () => {
   return (
@@ -36,7 +36,7 @@ const HomeBanner = () => {
               text={"Mon CV"}
               isOutline={true}
               link={"#"}
-              onClick={() => window.open(getResumeLinkFromCookie(), "_blank")}
+              onClick={() => redirectToResume()}
             />
           </section>
         </section>

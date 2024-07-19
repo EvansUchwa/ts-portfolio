@@ -1,3 +1,4 @@
+import { redirectToResume } from "@/helpers/others";
 import { LinkButton, SectionTitle } from "../../uikits/other";
 const HomeAbout = () => {
   return (
@@ -14,7 +15,7 @@ const HomeAbout = () => {
             Passionné d'informatique et d'électronique depuis mon enfance , je
             n'ai pas hésité après l'obtention de mon baccalauréat à me lancer
             d'abord dans la programmation puis par la suite dans le
-            développement web . J’ai profité de l'obtention d'une bourse de
+            développement web . J'ai profité de l'obtention d'une bourse de
             formation dans une université de chez moi pour me faire former en
             développement web full-stack. Mon expérience acquise au fil des
             projets me permet de mieux comprendre les attentes d'un client et de
@@ -31,8 +32,8 @@ const HomeAbout = () => {
           </p>
           <LinkButton
             text={"Mon Cv"}
-            link={process.env.resumeUrl!}
-            target="_blank"
+            link={"/"}
+            onClick={() => redirectToResume()}
           />
         </div>
       </div>

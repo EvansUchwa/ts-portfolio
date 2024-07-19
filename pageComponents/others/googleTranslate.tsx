@@ -20,13 +20,15 @@ const languages = [
 const includedLanguages = languages.map((lang) => lang.value).join(",");
 
 function googleTranslateElementInit() {
-  new window.google.translate.TranslateElement(
-    {
-      pageLanguage: "auto",
-      includedLanguages,
-    },
-    "google_translate_element"
-  );
+  if (typeof window !== "undefined") {
+    new window.google.translate.TranslateElement(
+      {
+        pageLanguage: "auto",
+        includedLanguages,
+      },
+      "google_translate_element"
+    );
+  }
 }
 
 export function GoogleTranslate() {
@@ -38,27 +40,28 @@ export function GoogleTranslate() {
   useEffect(() => {
     setAppLoader(true);
     let timeoutId: string | any | undefined;
-    window.googleTranslateElementInit = googleTranslateElementInit;
-    const observer = new MutationObserver((mutationsList, observer) => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        console.log("Translation completed");
-        observer.disconnect();
-        setAppLoader(false);
-      }, 1000);
-    });
-
-    const targetNode = document.querySelector("html");
-
-    if (targetNode) {
-      observer.observe(targetNode, {
-        attributes: true,
-        childList: true,
-        subtree: true,
+    if (typeof window !== "undefined") {
+      window.googleTranslateElementInit = googleTranslateElementInit;
+      const observer = new MutationObserver((mutationsList, observer) => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          console.log("Translation completed");
+          observer.disconnect();
+          setAppLoader(false);
+        }, 1000);
       });
-    }
 
-    return () => observer.disconnect();
+      const targetNode = document.querySelector("html");
+
+      if (targetNode) {
+        observer.observe(targetNode, {
+          attributes: true,
+          childList: true,
+          subtree: true,
+        });
+      }
+      return () => observer.disconnect();
+    }
   }, [langCookie]);
 
   const onChange = (value: string) => {
