@@ -11,17 +11,22 @@ export const AsideNav = () => {
     setOpened((prev) => !prev);
   }
   function onMenuLinkClick(event: React.MouseEvent): void {
-    const target = event.target as HTMLSpanElement;
-    const targetId = target.getAttribute("datatype") as string;
+    var etarget = event.currentTarget as HTMLSpanElement;
+    var targetId = etarget.getAttribute("datatype") as string;
     handleMenu();
     setTimeout(() => {
-      document
-        .getElementById(targetId)
-        ?.scrollIntoView({
-          behavior: "smooth",
-          block: "nearest",
-          inline: "start",
-        });
+      // document
+      //   .getElementById(targetId)
+      //   ?.scrollIntoView({
+      //     behavior: "smooth",
+      //     block: "nearest",
+      //     inline: "start",
+      //   });
+      var target = document.getElementById(targetId) as HTMLElement;
+      var targetParent = document.querySelector(
+        ".containerVisible"
+      ) as HTMLElement;
+      targetParent.scrollTop = target!.offsetTop;
     }, 1000);
   }
   return (
