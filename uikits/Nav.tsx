@@ -12,30 +12,55 @@ export const AsideNav = () => {
   }
   function onMenuLinkClick(event: React.MouseEvent): void {
     const target = event.target as HTMLSpanElement;
-    const targetId = target.id;
+    const targetId = target.getAttribute("datatype") as string;
     handleMenu();
-    setTimeout(
-      () => document.querySelector("." + targetId)?.scrollIntoView(true),
-      1000
-    );
+    setTimeout(() => {
+      document
+        .getElementById(targetId)
+        ?.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "start",
+        });
+    }, 1000);
   }
   return (
     <>
       <div className="containerHided">
         <section className="chNavLink">
-          <span id="home-banner" className="navBtn" onClick={onMenuLinkClick}>
+          <span
+            datatype="home-banner"
+            className="navBtn"
+            onClick={onMenuLinkClick}
+          >
             Accueil
           </span>
-          <span id="home-about" className="navBtn" onClick={onMenuLinkClick}>
+          <span
+            datatype="home-about"
+            className="navBtn"
+            onClick={onMenuLinkClick}
+          >
             A propos
           </span>
-          <span id="home-skill" className="navBtn" onClick={onMenuLinkClick}>
+          <span
+            datatype="home-skill"
+            className="navBtn"
+            onClick={onMenuLinkClick}
+          >
             Compétences
           </span>
-          <span id="home-work" className="navBtn" onClick={onMenuLinkClick}>
+          <span
+            datatype="home-work"
+            className="navBtn"
+            onClick={onMenuLinkClick}
+          >
             Travaux
           </span>
-          <span id="home-contact" className="navBtn" onClick={onMenuLinkClick}>
+          <span
+            datatype="home-contact"
+            className="navBtn"
+            onClick={onMenuLinkClick}
+          >
             Contact
           </span>
         </section>
