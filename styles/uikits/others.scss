@@ -1,0 +1,81 @@
+.themeManager{
+    position: absolute;
+    // background-color: var(--bgColor);
+    backdrop-filter: blur(5px);
+    background-color: rgba($color: #fff, $alpha: 0.4);
+    border-radius: 50px;
+    position: fixed;
+    padding: 10px 40px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 90000000;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: solid 1px var(--textColor1);
+
+    .themeToggler{
+        display: flex;
+        span{
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            color: grey;
+        }
+
+        section{
+            height: 30px;
+            width: 50px;
+            background-color: #efefef;
+            border-radius: 30px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            border: solid 1px transparent;
+            transition: all .5s ease-in-out;
+            position: relative;
+            
+            small{
+                display: block;
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                background-color: white;
+                transition: all .5s ease-in-out;
+            }
+
+            span{
+                position: absolute;
+                &.lightIcon{
+                   left: -30px;
+                }
+                &.darkIcon{
+                    right: -30px;
+                }
+            }
+
+            &.light-defTheme{
+                justify-content: flex-start;
+                 border-color: $primaryColor;
+                 background-color: $primaryColor;
+                 .lightIcon{
+                     color: $primaryColor !important;
+                 }
+             }
+             &.dark-defTheme{
+                 border-color: $secondaryColor;
+                 justify-content: flex-end;
+                 background-color: $secondaryColor;
+                  .darkIcon{
+                     color: $secondaryColor !important;
+                 }
+             }
+        }
+       
+    }
+}
+

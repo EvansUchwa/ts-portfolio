@@ -20,7 +20,7 @@
       display: flex;
       align-items: center;
       gap: 0 10px;
-      background-color: var(--secondaryColor);
+      background-color: $secondaryColor;
       padding: 5px 10px;
       border-radius: 10px;
       filter: grayscale(600);
@@ -30,7 +30,7 @@
       &:hover{
         opacity: 1;
         filter: none;
-        background-color: var(--secondaryColor);
+        background-color: $secondaryColor;
       }
       svg{
         font-size: 50px;

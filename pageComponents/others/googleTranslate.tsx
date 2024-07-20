@@ -4,6 +4,7 @@ import Script from "next/script";
 import React, { useEffect, useState } from "react";
 import { getCookie, setCookie } from "cookies-next";
 import { useAppLoader } from "@/contexts/loader";
+import { CircleFlagsEn, CircleFlagsFr } from "@/uikits/icons";
 
 declare global {
   interface Window {
@@ -13,22 +14,28 @@ declare global {
 }
 
 const languages = [
-  { label: "FR", value: "fr", src: "https://flagcdn.com/h60/fr.png" },
-  { label: "EN", value: "en", src: "https://flagcdn.com/h60/us.png" },
+  {
+    label: <CircleFlagsFr />,
+    value: "fr",
+    src: "https://flagcdn.com/h60/fr.png",
+  },
+  {
+    label: <CircleFlagsEn />,
+    value: "en",
+    src: "https://flagcdn.com/h60/us.png",
+  },
 ];
 
 const includedLanguages = languages.map((lang) => lang.value).join(",");
 
 function googleTranslateElementInit() {
-  if (typeof window !== "undefined") {
-    new window.google.translate.TranslateElement(
-      {
-        pageLanguage: "auto",
-        includedLanguages,
-      },
-      "google_translate_element"
-    );
-  }
+  new window.google.translate.TranslateElement(
+    {
+      pageLanguage: "auto",
+      includedLanguages,
+    },
+    "google_translate_element"
+  );
 }
 
 export function GoogleTranslate() {
@@ -38,30 +45,26 @@ export function GoogleTranslate() {
   );
 
   useEffect(() => {
-    setAppLoader(true);
     let timeoutId: string | any | undefined;
-    if (typeof window !== "undefined") {
-      window.googleTranslateElementInit = googleTranslateElementInit;
-      const observer = new MutationObserver((mutationsList, observer) => {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-          console.log("Translation completed");
-          observer.disconnect();
-          setAppLoader(false);
-        }, 1000);
+    window.googleTranslateElementInit = googleTranslateElementInit;
+    const observer = new MutationObserver((mutationsList, observer) => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        observer.disconnect();
+        setAppLoader(false);
+      }, 600);
+    });
+
+    const targetNode = document.querySelector("html");
+
+    if (targetNode) {
+      observer.observe(targetNode, {
+        attributes: true,
+        childList: true,
+        subtree: true,
       });
-
-      const targetNode = document.querySelector("html");
-
-      if (targetNode) {
-        observer.observe(targetNode, {
-          attributes: true,
-          childList: true,
-          subtree: true,
-        });
-      }
-      return () => observer.disconnect();
     }
+    return () => observer.disconnect();
   }, [langCookie]);
 
   const onChange = (value: string) => {
@@ -98,14 +101,18 @@ export function GoogleTranslate() {
 
 function LanguageSelector({ onChange, value }: LanguageSelectorPropsType) {
   const langCookie = value.split("/")[2];
+  const { appLoader, setAppLoader } = useAppLoader();
 
-  if (!getCookie("googtrans")) return null;
+  if (appLoader) return null;
   return (
     <div id="langSelector" className="notranslate">
       {languages.map((it) => (
         <span
           key={it.value}
-          onClick={(e) => onChange(it.value)}
+          onClick={(e) => {
+            setAppLoader(true);
+            onChange(it.value);
+          }}
           className={langCookie == it.value ? "isActive" : ""}
         >
           {it.label}

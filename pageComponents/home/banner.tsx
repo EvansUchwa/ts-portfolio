@@ -39,6 +39,11 @@ const HomeBanner = () => {
               onClick={() => redirectToResume()}
             />
           </section>
+
+          <section>
+            <span>D</span>
+            <span>W</span>
+          </section>
         </section>
 
         <section className="hbp-image">

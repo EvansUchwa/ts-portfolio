@@ -1,23 +1,13 @@
 @import 'app.scss';
 
 @import 'uikits/form.scss';
+@import 'uikits/others.scss';
 
 @import 'pages/accueil.scss';
 @import 'pages/travaux.scss';
 @import 'pages/apropos.scss';
 @import 'pages/competence.scss';
 @import 'pages/contact.scss';
-
-
-:root {
-  --bgColor: #0A0D15;
-   --primaryColor: #9C6E5B;
-  --pbcD1: #121A33;
-  --secondaryColor: #121A33; 
-  --ob2: rgba(0, 0, 0, 0.2);
-  --ob4: rgba(0, 0, 0, 0.4);
-  --ob6: rgba(0, 0, 0, 0.6);
-}
 
 * {
   box-sizing: border-box;
@@ -69,7 +59,7 @@ textarea {
 }
 /* POur les button du site */
 button {
-  background-color: var(--primaryColor);
+  background-color: $primaryColor;
   color: white;
   padding: 15px 30px;
   position: relative;
@@ -94,7 +84,7 @@ button svg rect {
   fill: transparent;
 }
 button svg rect {
-  stroke: var(--primaryColor);
+  stroke: $primaryColor;
   stroke-width: 4;
   transition: 1s;
   stroke-dasharray: 400;
@@ -119,7 +109,7 @@ img {
 //   margin: 0;
 // }
 footer{
-  background-color: var(--primaryColor);
+  background-color: $primaryColor;
   color: white;
   text-align: center;
   width: 100%;
@@ -182,8 +172,9 @@ iframe.skiptranslate {
  }
 
  .appLoader{
-  background-color: $secondaryColor;
-  color: white;
+  background-color: rgba($color: #fff, $alpha: 0.5);
+  backdrop-filter: blur(15px);
+  color: $primaryColor;
   height: 100vh;
   display: flex;
   flex-direction: column;

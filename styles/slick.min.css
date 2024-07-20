@@ -152,12 +152,12 @@
 }
 
 li.slick-active{
-    border: solid 2px var(--primaryColor);
+    border: solid 2px $primaryColor;
     padding: 2px;
     border-radius: 100%;
 }  
 li.slick-active span{
-    background-color: var(--primaryColor);
+    background-color: $primaryColor;
     width: 20px;
     height: 20px;
 }

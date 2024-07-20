@@ -1,6 +1,15 @@
 $primaryColor: #9C6E5B;
 $secondaryColor: #121A33;
- 
+
+
+:root{
+  --bgColor: #fff;
+  --textColor1: $secondaryColor;
+  &.dark{
+    --bgColor: #1e1f1f;
+    --textColor1: #a29d97;
+  }
+}
 ::selection {
   color: none;
   background: none;
@@ -84,8 +93,8 @@ h1,.partTitle{
   align-items: center;
   justify-content: center;
   font-size: 40px;
-  color: $secondaryColor;
-  transition: all .5s ease-in-out;
+  color: var(--textColor1);
+  transition: all .4s ease-in-out;
 
   &:hover{
     background-color: $primaryColor;
@@ -103,29 +112,34 @@ h1,.partTitle{
   height: 100vh;
   z-index: 100;
   width: 100%;
-  background-color: var(--secondaryColor);
+  background-color: var(--bgColor);
   display: flex;
   flex-direction: column;
   position: fixed;
   z-index: 1000;
 }
 .chNavLink {
-  margin: 75px auto;
-  width: 80%;
+  margin: 10px auto;
+  width: 90%;
   display: flex;
-  flex-direction: column;
  flex-wrap: wrap;
- justify-content: flex-end;
- align-items: flex-end;
+ justify-content: center;
+ height: 100vh;
+
  span {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   font-weight: bold;
-  color: white;
-  padding: 20px;
+  color: var(--textColor1);
+  
   font-size: 5vh;
+  width: 40%;
   text-transform: uppercase;
   &:hover {
-    color: var(--primaryColor);
+    color: white;
+    background-color: $primaryColor;
   }
   // cursor: pointer;
 }
@@ -133,8 +147,8 @@ h1,.partTitle{
 .containerVisible {
   z-index: 10100000;
   width: 100%;
-  background-color: white;
-  transition: all 0.7s ease 0.1s;
+  background-color: var(--bgColor);
+  transition: all 0.4s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -145,9 +159,11 @@ h1,.partTitle{
   transform-origin: 0 100%;
 }
 .containerVisibleRotate {
-  transform: rotate(30deg) scale(0.8);
+  overflow-y: hidden;
+  transform: rotate(5deg) translateX(0) scale(25%);
   border-radius: 50px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  opacity: 0.1;
 }
 
 .pageHeader {
@@ -168,7 +184,7 @@ h1,.partTitle{
     margin: auto;
     display: flex;
     align-items: center;
-    color: var(--primaryColor) !important;
+    color: $primaryColor !important;
     font-weight: bold;
     font-size: 30px;
   }
@@ -182,7 +198,7 @@ h1,.partTitle{
   transition: all .5s;
 }
 .asideNavActive {
-  color: var(--secondaryColor) !important;
+  color: $secondaryColor !important;
   position: relative;
   transition: all 0.5s;
 }
@@ -197,12 +213,12 @@ aside a {
   position: absolute;
   width: 10px;
   height: 1px;
-  background-color: var(--secondaryColor);
+  background-color: $secondaryColor;
 }
 
 
 .btnStyle {
-      background-color: var(--primaryColor);
+      background-color: $primaryColor;
       margin-top: 10px;
       color: white;
       padding: 16px 35px;
@@ -215,16 +231,16 @@ aside a {
        border-color:  $primaryColor;
 
         background-color: transparent;
-        color: var(--primaryColor);
+        color: $primaryColor;
       }
       &.btnOulineStyle {
         background-color: transparent;
         border-color: $primaryColor;
-        color:  var(--primaryColor);
+        color:  $primaryColor;
         padding: 10px 25px;
         border-radius: 50px;
         &:hover {
-          background-color: var(--primaryColor);
+          background-color: $primaryColor;
           color: white;
         }
       }
@@ -249,5 +265,13 @@ aside a {
   @media screen  and (max-width: 758px) {
     .customCursor{
       background-color: transparent;
+    }
+
+    .chNavLink {
+
+    
+     span {
+      width: 100%;
+    }
     }
   }

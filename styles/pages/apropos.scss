@@ -1,7 +1,7 @@
 /* A propos */
 .home-about {
   z-index: 22222222222;
-  margin: 150px auto;
+  margin: 200px auto;
   width: 90%;
   color: white;
   position: relative;
@@ -14,7 +14,7 @@
 
 }
 .abp-Text {
-  color: var(--secondaryColor);
+  color: var(--textColor1);
   margin: 20px 0 20px 0;
   width: 45%;
   display: flex;
@@ -39,7 +39,7 @@
     width: 100%;
     top: 50%;
     height: 60%;
-    background-color: var(--secondaryColor);
+    background-color: $secondaryColor;
     left: -50%;
     z-index: -1;
     border-radius: 20px;

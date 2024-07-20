@@ -8,6 +8,7 @@ import { Toaster } from "sonner";
 import { GoogleTranslate } from "@/pageComponents/others/googleTranslate";
 import { AppLoaderContextProvider } from "@/contexts/loader";
 import AppLoader from "@/uikits/loaders";
+import ThemeManager from "@/pageComponents/others/themeManager";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -61,6 +62,7 @@ export default function RootLayout({
             </div>
           </div>
           <div className="customCursor"></div>
+          <ThemeManager />
         </AppLoaderContextProvider>
       </body>
     </html>

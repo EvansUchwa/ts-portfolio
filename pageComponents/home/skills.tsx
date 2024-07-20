@@ -25,7 +25,7 @@ const HomeSkills = () => {
 
       <div className="skillList">
         {techno.map((item, i) => (
-          <article key={"techno nb" + i}>
+          <article key={"techno nb" + i} className="notranslate">
             {technosIcons[item.icon]}
             <b>{item.name} </b>
           </article>

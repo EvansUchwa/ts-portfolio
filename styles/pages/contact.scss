@@ -1,5 +1,4 @@
 /*  */
-$secondaryColor: #121A33;
 .home-contact {
   padding: 50px 0;
   display: flex;
@@ -22,7 +21,7 @@ $secondaryColor: #121A33;
     width: 100vw;
     height: 100%;
     position: absolute;
-    background-color: rgba($color: $secondaryColor, $alpha: 0.9);
+    // background-color: rgba($color: $secondaryColor, $alpha: 0.9);
   }
   h1{
     text-align: left;
@@ -40,7 +39,7 @@ $secondaryColor: #121A33;
     a{
       margin: 5px 0;
       border-radius: 5px;
-      color: white;
+      color: var(--textColor1);
       background-color: $primaryColor;
       width: 40px;
         height: 40px;
@@ -62,7 +61,7 @@ $secondaryColor: #121A33;
       text-align: center;
       display: flex;
       align-items: center;
-      color: white;
+      color: var(--textColor1);
 
       span{
         font-size: 20px;
@@ -73,7 +72,7 @@ $secondaryColor: #121A33;
         justify-content: center;
         border-radius: 100%;
         background-color: white;
-        color: var(--primaryColor);
+        color: $primaryColor;
         margin-right: 15px;
 
       }
@@ -85,14 +84,15 @@ $secondaryColor: #121A33;
 
 
 .cp-form{
-background-color: white;
+background-color: var(--bgColor);
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 padding: 50px 0;
 border-radius: 5px;
 z-index: 1000000;
 form{
   width: 90%;
   margin: auto;
-  color: var(--secondaryColor);
+  color: var(--textColor1);
 }
 
 }

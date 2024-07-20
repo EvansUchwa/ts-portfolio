@@ -54,7 +54,7 @@ export default function Home() {
 
   return (
     <>
-      <ParticlesBg type="cobweb" bg={true} color="#121A33" num={50} />
+      <ParticlesBg type="cobweb" bg={true} color="#888c99" num={50} />
 
       <div className="home">
         <HomeBanner />
