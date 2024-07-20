@@ -2,12 +2,15 @@
 import { IcBaselineLightMode, IcBaselineModeNight } from "@/uikits/icons";
 import React, { useEffect, useState } from "react";
 
+function getDefaultTheme() {
+  if (typeof window !== "undefined") {
+    return window.localStorage.getItem("edsv-theme")
+      ? window.localStorage.getItem("edsv-theme")
+      : "light";
+  }
+}
 function ThemeManager() {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("edsv-theme")
-      ? localStorage.getItem("edsv-theme")
-      : "light"
-  );
+  const [theme, setTheme] = useState(getDefaultTheme());
 
   useEffect(() => {
     if (theme == "light") {
@@ -18,12 +21,14 @@ function ThemeManager() {
   }, [theme]);
 
   function toggleTheme() {
-    if (document.documentElement.classList.contains("dark")) {
-      localStorage.setItem("edsv-theme", "light");
-      setTheme("light");
-    } else {
-      localStorage.setItem("edsv-theme", "dark");
-      setTheme("dark");
+    if (typeof window !== "undefined") {
+      if (document.documentElement.classList.contains("dark")) {
+        window.localStorage.setItem("edsv-theme", "light");
+        setTheme("light");
+      } else {
+        window.localStorage.setItem("edsv-theme", "dark");
+        setTheme("dark");
+      }
     }
   }
 
