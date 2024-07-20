@@ -2,7 +2,7 @@
     position: absolute;
     // background-color: var(--bgColor);
     backdrop-filter: blur(5px);
-    background-color: rgba($color: #fff, $alpha: 0.4);
+    background-color: rgba($color: $primaryColor, $alpha: 0.2);
     border-radius: 50px;
     position: fixed;
     padding: 10px 40px;
@@ -11,7 +11,6 @@
     transform: translateX(-50%);
     z-index: 90000000;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border: solid 1px var(--textColor1);
 
     .themeToggler{
         display: flex;
@@ -25,11 +24,12 @@
             align-items: center;
             font-size: 25px;
             color: grey;
+            background-color: white;
         }
 
         section{
-            height: 30px;
-            width: 50px;
+            height: 40px;
+            width: 70px;
             background-color: #efefef;
             border-radius: 30px;
             padding: 4px;
@@ -41,8 +41,8 @@
             
             small{
                 display: block;
-                width: 20px;
-                height: 20px;
+                width: 30px;
+                height: 30px;
                 border-radius: 100%;
                 background-color: white;
                 transition: all .5s ease-in-out;
@@ -51,10 +51,10 @@
             span{
                 position: absolute;
                 &.lightIcon{
-                   left: -30px;
+                   left: -34px;
                 }
                 &.darkIcon{
-                    right: -30px;
+                    right: -34px;
                 }
             }
 

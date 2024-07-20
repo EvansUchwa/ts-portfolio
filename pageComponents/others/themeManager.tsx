@@ -4,22 +4,21 @@ import React, { useEffect, useState } from "react";
 
 function getDefaultTheme() {
   if (typeof window !== "undefined") {
-    return window.localStorage.getItem("edsv-theme")
-      ? window.localStorage.getItem("edsv-theme")
-      : "light";
+    const storedTheme = localStorage.getItem("edsv-theme");
+    if (storedTheme) {
+      document.documentElement.classList.toggle("dark", storedTheme === "dark");
+      return storedTheme;
+    }
+    return "light";
   }
+  return "light";
 }
 function ThemeManager() {
-  const [theme, setTheme] = useState(getDefaultTheme());
+  const [theme, setTheme] = useState<string>("");
 
   useEffect(() => {
-    if (theme == "light") {
-      document.documentElement.classList.remove("dark");
-    } else {
-      document.documentElement.classList.add("dark");
-    }
-  }, [theme]);
-
+    setTheme(getDefaultTheme()!);
+  }, []);
   function toggleTheme() {
     if (typeof window !== "undefined") {
       if (document.documentElement.classList.contains("dark")) {
@@ -29,6 +28,7 @@ function ThemeManager() {
         window.localStorage.setItem("edsv-theme", "dark");
         setTheme("dark");
       }
+      document.documentElement.classList.toggle("dark");
     }
   }
 
