@@ -2,7 +2,7 @@ import { redirectToResume } from "@/helpers/others";
 import { LinkButton, SectionTitle } from "../../uikits/other";
 const HomeAbout = () => {
   return (
-    <div className="home-about">
+    <div className="home-about" id="home-about">
       <div>
         <div className="abpImg">
           <img src={"/img/me.webp"} />

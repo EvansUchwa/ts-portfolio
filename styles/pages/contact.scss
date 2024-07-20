@@ -71,8 +71,8 @@
         align-items: center;
         justify-content: center;
         border-radius: 100%;
-        background-color: white;
-        color: $primaryColor;
+        background-color: var(--bgColor);
+        color: var(--textColor1);
         margin-right: 15px;
 
       }

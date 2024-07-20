@@ -1,15 +1,16 @@
+:root{
+  --bgColor: #fff;
+  --textColor1: #121A33;
+  
+}
+:root.dark{
+  --bgColor: #1e1f1f;
+  --textColor1: #a29d97;
+}
+
 $primaryColor: #9C6E5B;
 $secondaryColor: #121A33;
 
-
-:root{
-  --bgColor: #fff;
-  --textColor1: $secondaryColor;
-  &.dark{
-    --bgColor: #1e1f1f;
-    --textColor1: #a29d97;
-  }
-}
 ::selection {
   color: none;
   background: none;
@@ -30,6 +31,7 @@ $secondaryColor: #121A33;
   -ms-user-select: none;
   user-select: none;
   cursor: none;
+  transition:  background-color 0.3s ease-in,color .3s ease-out;
 }
 .customCursor{
   position: fixed;
@@ -252,6 +254,7 @@ aside a {
     position: relative;
     text-align: center;
     font-size: 40px;
+    color: var(--textColor1);
     sup{
       white-space: nowrap;
       position: absolute;

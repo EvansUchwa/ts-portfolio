@@ -9,6 +9,7 @@ import { GoogleTranslate } from "@/pageComponents/others/googleTranslate";
 import { AppLoaderContextProvider } from "@/contexts/loader";
 import AppLoader from "@/uikits/loaders";
 import ThemeManager from "@/pageComponents/others/themeManager";
+import { AppThemeContextProvider } from "@/contexts/theme";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -50,20 +51,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Toaster richColors={true} />
-        <AppLoaderContextProvider>
-          <AppLoader />
-          <GoogleTranslate />
-          <div className="container">
-            <AsideNav />
-            <div className="containerVisible">
-              {children}
-              <Footer />
+        <AppThemeContextProvider>
+          <Toaster richColors={true} />
+          <AppLoaderContextProvider>
+            <AppLoader />
+            <GoogleTranslate />
+            <div className="container">
+              <AsideNav />
+              <div className="containerVisible">
+                {children}
+                <Footer />
+              </div>
             </div>
-          </div>
-          <div className="customCursor"></div>
-          <ThemeManager />
-        </AppLoaderContextProvider>
+            <div className="customCursor"></div>
+            <ThemeManager />
+          </AppLoaderContextProvider>
+        </AppThemeContextProvider>
       </body>
     </html>
   );

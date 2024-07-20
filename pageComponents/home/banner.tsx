@@ -5,7 +5,7 @@ import { redirectToResume } from "@/helpers/others";
 
 const HomeBanner = () => {
   return (
-    <div className="home-banner">
+    <div className="home-banner" id="home-banner">
       <div className="hb-presentation">
         <section className="hbp-text">
           <section>
@@ -38,11 +38,6 @@ const HomeBanner = () => {
               link={"#"}
               onClick={() => redirectToResume()}
             />
-          </section>
-
-          <section>
-            <span>D</span>
-            <span>W</span>
           </section>
         </section>
 

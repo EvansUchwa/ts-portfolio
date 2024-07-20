@@ -20,7 +20,7 @@ const HomeSkills = () => {
   ];
 
   return (
-    <div className="home-skill">
+    <div className="home-skill" id="home-skill">
       <SectionTitle title={"Mes outils"} />
 
       <div className="skillList">

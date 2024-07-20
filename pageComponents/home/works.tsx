@@ -36,7 +36,7 @@ const HomeWorks = () => {
   }
 
   return (
-    <div className="home-work">
+    <div className="home-work" id="home-work">
       <SectionTitle title="Mes travaux" />
       <section>
         <CustomSelect

@@ -15,8 +15,8 @@ export const AsideNav = () => {
     const targetId = target.id;
     handleMenu();
     setTimeout(
-      () => document.querySelector("." + targetId)?.scrollIntoView(),
-      500
+      () => document.querySelector("." + targetId)?.scrollIntoView(true),
+      1000
     );
   }
   return (

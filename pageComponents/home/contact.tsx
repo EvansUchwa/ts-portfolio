@@ -60,7 +60,7 @@ const HomeContact = () => {
     );
   }
   return (
-    <div className="home-contact" id="pcContact">
+    <div className="home-contact" id="home-contact">
       <section className="cp-infos">
         <SectionTitle title={"Contact"} />
         <div>
