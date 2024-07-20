@@ -94,7 +94,7 @@ h1,.partTitle{
   justify-content: center;
   font-size: 40px;
   color: var(--textColor1);
-  transition: all .4s ease-in-out;
+  transition: all .5s ease-in-out;
 
   &:hover{
     background-color: $primaryColor;
@@ -119,12 +119,12 @@ h1,.partTitle{
   z-index: 1000;
 }
 .chNavLink {
-  margin: 10px auto;
+  margin: auto;
   width: 90%;
   display: flex;
  flex-wrap: wrap;
  justify-content: center;
- height: 100vh;
+ height: 80vh;
 
  span {
   display: flex;
@@ -148,7 +148,7 @@ h1,.partTitle{
   z-index: 10100000;
   width: 100%;
   background-color: var(--bgColor);
-  transition: all 0.4s ease-in-out;
+  transition: all 1s cubic-bezier(0.6, -0.28, 0.74, 0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,10 +160,12 @@ h1,.partTitle{
 }
 .containerVisibleRotate {
   overflow-y: hidden;
-  transform: rotate(5deg) translateX(0) scale(25%);
+  transform: rotate(90deg) scale(0.4);
   border-radius: 50px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  opacity: 0.1;
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+
 }
 
 .pageHeader {
