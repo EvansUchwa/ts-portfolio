@@ -15,7 +15,7 @@
   }
 }
 .wp-workList {
-  width: 95%;
+  width: 100%;
   margin: auto;
 
 
@@ -24,15 +24,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 40px;
     overflow: hidden;
     min-height: 100vh;
-    filter: grayscale(500);
     transition: all .5s;
     // cursor: pointer;
-    &:hover{
-      filter: initial;
-    }
+
       &::after{
         content: '';
         position: absolute;
@@ -45,7 +41,7 @@
     section{
       padding: 10px;
       border-radius: 20px;
-      background-color: white;
+      background-color: var(--bgColor);
       width: 60%;
       color: $primaryColor;
       z-index: 555555;
@@ -58,10 +54,12 @@
       }
       h3{
         font-size: 30px;
+        padding: 0 20px;
       }
       p{
+        padding: 0 20px;
         font-size: 2vh;
-        color: $secondaryColor;
+        color: var(--textColor1);
       }
       a{
         margin-right: auto;
@@ -70,16 +68,22 @@
         display: flex;
         align-items: center;
         gap: 0 10px;
+        padding: 0 20px;
+
         article{
           width: 50px;
           height: 50px;
-          background-color: #efefef;
+          background-color: var(--bgColor);
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
           display: flex;
           justify-content: center;
           align-items: center;
           border-radius: 20px;
           svg{
             font-size: 30px;
+          }
+          &:hover{
+            transform: scale(1.2);
           }
         }
         

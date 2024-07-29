@@ -4,6 +4,10 @@ import { CustomSelect, LinkButton, SectionTitle } from "../../uikits/other";
 import Slider from "react-slick";
 import { ReactElement, useState } from "react";
 import { technosIcons } from "@/helpers/others";
+import {
+  IcRoundArrowCircleLeft,
+  IcRoundArrowCircleRight,
+} from "@/uikits/icons";
 
 const HomeWorks = () => {
   const [iWorks, setiW] = useState([]);
@@ -11,16 +15,26 @@ const HomeWorks = () => {
 
   const settings = {
     dots: true,
-    arrows: false,
+    arrows: true,
     infinite: true,
     fade: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     customPaging: function (i: number): ReactElement {
       return <span>{i}</span>;
     },
+    nextArrow: (
+      <span>
+        <IcRoundArrowCircleRight />
+      </span>
+    ),
+    prevArrow: (
+      <span>
+        <IcRoundArrowCircleLeft />
+      </span>
+    ),
   };
 
   function handleChange(selected: string) {

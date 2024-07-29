@@ -16,6 +16,9 @@ import {
   SkillIconsGitlabDark,
   SkillIconsDocker,
   SkillIconsNodejsDark,
+  SkillIconsPrisma,
+  SkillIconsPostgresqlDark,
+  SkillIconsPhpDark,
 } from "@/uikits/icons";
 import { getCookie } from "cookies-next";
 // {
@@ -60,6 +63,7 @@ export const technosIcons: technosIconType = {
   css: <SkillIconsCss />,
   js: <SkillIconsJavascript />,
   ts: <SkillIconsTypescript />,
+  php: <SkillIconsPhpDark />,
   sass: <SkillIconsSass />,
   react: <SkillIconsReactDark />,
   next: <SkillIconsNextjsLight />,
@@ -71,6 +75,8 @@ export const technosIcons: technosIconType = {
   vercel: <SkillIconsVercelDark />,
   heroku: <SkillIconsHeroku />,
   node: <SkillIconsNodejsDark />,
+  prisma: <SkillIconsPrisma />,
+  postgresql: <SkillIconsPostgresqlDark />,
 };
 
 export function getResumeLinkFromCookie() {

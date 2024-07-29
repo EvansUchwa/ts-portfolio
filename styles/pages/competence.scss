@@ -19,18 +19,21 @@
       // cursor: pointer;
       display: flex;
       align-items: center;
+      justify-content: center;
+      background-color: var(--bgColor);
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
       gap: 0 10px;
-      background-color: $secondaryColor;
       padding: 5px 10px;
       border-radius: 10px;
-      filter: grayscale(600);
-      opacity: 0.5;
       transition: all .5s;
-      color: grey;
+  
       &:hover{
-        opacity: 1;
-        filter: none;
+        transform: scale(1.2);
         background-color: $secondaryColor;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+        b{
+          color: white;
+        }
       }
       svg{
         font-size: 50px;
@@ -38,6 +41,7 @@
       }
       b{
         font-size: 30px;
+        color: var(--textColor1);
       }
     }
   }
