@@ -130,7 +130,7 @@
     transition: all .5s;
     position: absolute;
     left: 50%;
-    bottom: -50px;
+    bottom: -40px;
     margin: 0;
     padding: 0;
     transform: translateX(-50%);

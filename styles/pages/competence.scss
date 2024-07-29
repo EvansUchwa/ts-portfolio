@@ -5,25 +5,23 @@
   // margin: 150px auto;
   margin-bottom: 150px;
   .skillList{
-    padding: 20px;
     border-radius: 20px;
-    width: 90%;
+    width: 98%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 20px;
+    gap: 20px 10px;
     article{
-      min-width: 20%;
-      max-width: 35%;
-      // cursor: pointer;
+      min-width: 22%;
+
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: var(--bgColor);
       box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-      gap: 0 10px;
-      padding: 5px 10px;
+      gap: 0 5px;
+      padding: 10px 0;
       border-radius: 10px;
       transition: all .5s;
   
@@ -37,23 +35,35 @@
       }
       svg{
         font-size: 50px;
-        width: 20%;
       }
       b{
         font-size: 30px;
         color: var(--textColor1);
+        max-width: 60%;
       }
     }
   }
 }
 
+@media screen and (min-width: 512px) and (max-width: 972px) {
+  .home-skill {
+    .skillList{
+      article{
+        min-width: 40%;
+      }
+    }
+  }
+  
+}
+
+
+
 @media screen and (max-width: 512px) {
   .home-skill {
     margin-bottom: 100px;
     .skillList{
-      padding: 10px;
       article{
-        max-width: 48%;
+        min-width: 45%;
         // padding: 6px 15px;
         svg{
           font-size: 20px;
