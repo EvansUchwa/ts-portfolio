@@ -9,7 +9,7 @@ const HomeBanner = () => {
       <div className="hb-presentation">
         <section className="hbp-text">
           <section>
-            <h1>Evans Djossouvi</h1>
+            <h1 className="notranslate">Evans Djossouvi</h1>
             <b>
               Développeur Web <br />{" "}
               <strong className="notranslate">

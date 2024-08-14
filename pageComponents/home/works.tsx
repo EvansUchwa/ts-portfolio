@@ -77,7 +77,7 @@ const HomeWorks = () => {
               >
                 <section>
                   <img src={"/img/" + item.img} alt="random" />
-                  <h3>{item.name}</h3>
+                  <h3 className="notranslate">{item.name}</h3>
                   <p>{item.description}</p>
                   <div>
                     {item.technos.map((icon, j) => (
