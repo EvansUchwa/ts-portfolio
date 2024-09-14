@@ -27,9 +27,9 @@ export const works: WorkType[] = [
   {
     name: "CMPE Commodity",
     description:
-      "Une application web destinée à aider les professionnels du déménagement et du transport de biens en France à trouver des clients. L'application est en cours de lancement et compte déjà une centaine d'entreprises et de clients préinscrits.",
+      "Site vitrine pour des produits de négoce de matières premières, offrant une présentation claire des solutions et services disponibles.",
     img: "cmpe.webp",
-    link: "https://dofra.fr",
+    link: "https://www.cmpecommodity.com/",
     technos: ["next", "sass", "github"],
   },
   {
