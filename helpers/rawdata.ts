@@ -25,6 +25,22 @@ export const works: WorkType[] = [
     technos: ["next", "mongo", "sass", "gitlab", "docker"],
   },
   {
+    name: "Refi",
+    description:
+      "Une plateforme web développée pour une entreprise immobilière. Elle facilite les interactions entre les clients et l'entreprise du client.",
+    img: "refi.webp",
+    link: "https://refi.bj",
+    technos: ["react", "node", "mongo", "css"],
+  },
+  {
+    name: "Ecomplane",
+    description:
+      "ECOMPLANE est une application conçue pour un particulier qui vend des formations en e-commerce. Elle simplifie et booste son activité en proposant des solutions adaptées pour maximiser les ventes et atteindre rapidement ses objectifs.",
+    img: "ecomplane.webp",
+    link: "https://ecomplane.com/",
+    technos: ["react", "node", "mongo", "sass"],
+  },
+  {
     name: "CMPE Commodity",
     description:
       "Site vitrine pour des produits de négoce de matières premières, offrant une présentation claire des solutions et services disponibles.",
@@ -40,14 +56,7 @@ export const works: WorkType[] = [
     link: "https://cleopatra.sx",
     technos: ["react", "node", "mongo", "sass", "docker"],
   },
-  {
-    name: "Refi",
-    description:
-      "Une plateforme web développée pour une entreprise immobilière. Elle facilite les interactions entre les clients et l'entreprise du client.",
-    img: "refi.webp",
-    link: "https://refi.bj",
-    technos: ["react", "node", "mongo", "css"],
-  },
+
   {
     name: "VidCensor",
     description:
