@@ -131,7 +131,7 @@ const HomeContact = () => {
                 <FormikFieldProvider {...item} key={"contact field nb " + i} />
               ))}
               <FormBtn
-                text={isSubmitting ? "..." : "Envoyez"}
+                text={isSubmitting ? "..." : "Envoyer"}
                 isValid={isSubmitting ? false : isValid}
               />
             </Form>

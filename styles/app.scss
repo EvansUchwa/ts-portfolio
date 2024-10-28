@@ -1,15 +1,14 @@
-:root{
+:root {
   --bgColor: #fff;
-  --textColor1: #121A33;
-  
+  --textColor1: #121a33;
 }
-:root.dark{
+:root.dark {
   --bgColor: #1e1f1f;
   --textColor1: #a29d97;
 }
 
-$primaryColor: #9C6E5B;
-$secondaryColor: #121A33;
+$primaryColor: #9c6e5b;
+$secondaryColor: #121a33;
 
 ::selection {
   color: none;
@@ -22,7 +21,7 @@ $secondaryColor: #121A33;
   background: none;
 }
 
-*{
+* {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -31,9 +30,9 @@ $secondaryColor: #121A33;
   -ms-user-select: none;
   user-select: none;
   cursor: none;
-  transition:  background-color 0.3s ease-in,color .3s ease-out;
+  transition: background-color 0.3s ease-in, color 0.3s ease-out;
 }
-.customCursor{
+.customCursor {
   position: fixed;
   opacity: 0;
   top: 0;
@@ -51,29 +50,29 @@ $secondaryColor: #121A33;
   transition-timing-function: ease-in-out;
   scale: 0.3;
   z-index: 999999999999999999;
-  &.customCursorInit{
+  &.customCursorInit {
     opacity: 1;
   }
-  &.customCursorHoveredLink{
+  &.customCursorHoveredLink {
     transform: scale(2);
   }
 }
-
 
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   border-radius: 50px;
-  }
-  ::-webkit-scrollbar-track-piece  {
+}
+::-webkit-scrollbar-track-piece {
   background-color: $secondaryColor;
-  }
-  ::-webkit-scrollbar-thumb:vertical {
+}
+::-webkit-scrollbar-thumb:vertical {
   height: 10px;
   background-color: $primaryColor;
-  }
+}
 
-h1,.partTitle{
+h1,
+.partTitle {
   margin-bottom: 25px;
   position: relative;
 }
@@ -85,8 +84,9 @@ h1,.partTitle{
   border-radius: 80px;
   background-color: rgba($color: $primaryColor, $alpha: 0.2);
   backdrop-filter: blur(5px);
-  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
- 
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+
   position: fixed;
   top: 20px;
   left: 20px;
@@ -96,16 +96,16 @@ h1,.partTitle{
   justify-content: center;
   font-size: 40px;
   color: var(--textColor1);
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 
-  &:hover{
+  &:hover {
     background-color: $primaryColor;
     color: #efefef;
   }
 }
 
 /*  */
-.container { 
+.container {
   display: flex;
   position: relative;
   overflow: hidden;
@@ -124,27 +124,27 @@ h1,.partTitle{
   margin: auto;
   width: 90%;
   display: flex;
- flex-wrap: wrap;
- justify-content: center;
- height: 80vh;
-
- span {
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
-  font-weight: bold;
-  color: var(--textColor1);
-  
-  font-size: 5vh;
-  width: 40%;
-  text-transform: uppercase;
-  &:hover {
-    color: white;
-    background-color: $primaryColor;
+  height: 80vh;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    color: var(--textColor1);
+
+    font-size: 5vh;
+    width: 40%;
+    text-transform: uppercase;
+    &:hover {
+      color: white;
+      background-color: $primaryColor;
+    }
+    // cursor: pointer;
   }
-  // cursor: pointer;
-}
 }
 .containerVisible {
   z-index: 10100000;
@@ -167,7 +167,6 @@ h1,.partTitle{
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   opacity: 0;
   transition: all 1s cubic-bezier(0.6, -0.28, 0.74, 0.05);
-
 }
 
 .pageHeader {
@@ -195,11 +194,10 @@ h1,.partTitle{
 }
 /* Fin logo */
 
-
 /*  */
 .navBtn {
   color: white;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 .asideNavActive {
   color: $secondaryColor !important;
@@ -220,63 +218,58 @@ aside a {
   background-color: $secondaryColor;
 }
 
-
 .btnStyle {
+  background-color: $primaryColor;
+  margin-top: 10px;
+  color: white;
+  padding: 16px 35px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  border: solid 1px transparent;
+
+  &:hover {
+    border-color: $primaryColor;
+
+    background-color: transparent;
+    color: $primaryColor;
+  }
+  &.btnOulineStyle {
+    background-color: transparent;
+    border-color: $primaryColor;
+    color: $primaryColor;
+    border-radius: 50px;
+    &:hover {
       background-color: $primaryColor;
-      margin-top: 10px;
       color: white;
-      padding: 16px 35px;
-      border-radius: 50px;
-      display: flex;
-      align-items: center;
-      border: solid 1px transparent;
-
-      &:hover {
-       border-color:  $primaryColor;
-
-        background-color: transparent;
-        color: $primaryColor;
-      }
-      &.btnOulineStyle {
-        background-color: transparent;
-        border-color: $primaryColor;
-        color:  $primaryColor;
-        padding: 10px 25px;
-        border-radius: 50px;
-        &:hover {
-          background-color: $primaryColor;
-          color: white;
-        }
-      }
+    }
+  }
 }
 
-  h1.sectionTitle{
-    position: relative;
-    text-align: center;
-    font-size: 40px;
-    color: var(--textColor1);
-    sup{
-      white-space: nowrap;
-      position: absolute;
-      color: #9C6E5B30;
-      font-size: 60px;
-      width: 120%;
-      left: 0;
-      top: -50%;
-    }
+h1.sectionTitle {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  color: var(--textColor1);
+  sup {
+    white-space: nowrap;
+    position: absolute;
+    color: #9c6e5b30;
+    font-size: 60px;
+    width: 120%;
+    left: 0;
+    top: -50%;
+  }
+}
+
+@media screen and (max-width: 758px) {
+  .customCursor {
+    background-color: transparent;
   }
 
-
-  @media screen  and (max-width: 758px) {
-    .customCursor{
-      background-color: transparent;
-    }
-
-    .chNavLink {
-
-    
-     span {
+  .chNavLink {
+    span {
       width: 100%;
     }
-    }
   }
+}

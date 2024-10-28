@@ -28,12 +28,9 @@ const HomeBanner = () => {
           </section>
 
           <section className="hpp-contactBtn">
+            <LinkButton text={"Me contacter"} link={"#home-contact"} />
             <LinkButton
-              text={"Me contacter"}
-              link={"mailto:johnsonevans686@gmail.com"}
-            />
-            <LinkButton
-              text={"Mon CV"}
+              text={"Mon Cv"}
               isOutline={true}
               link={"#"}
               onClick={() => redirectToResume()}

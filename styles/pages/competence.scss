@@ -2,9 +2,8 @@
 .home-skill {
   width: 90%;
   color: white;
-  // margin: 150px auto;
-  margin-bottom: 150px;
-  .skillList{
+  margin: 75px auto;
+  .skillList {
     border-radius: 20px;
     width: 98%;
     margin: auto;
@@ -12,31 +11,34 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 20px 10px;
-    article{
+    article {
       min-width: 22%;
 
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: var(--bgColor);
-      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
       gap: 0 5px;
       padding: 10px 0;
       border-radius: 10px;
-      transition: all .5s;
-  
-      &:hover{
+      transition: all 0.5s;
+
+      &:hover {
         transform: scale(1.2);
         background-color: $secondaryColor;
-        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-        b{
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+          rgba(17, 17, 26, 0.1) 0px 16px 56px,
+          rgba(17, 17, 26, 0.1) 0px 24px 80px;
+        b {
           color: white;
         }
       }
-      svg{
+      svg {
         font-size: 50px;
       }
-      b{
+      b {
         font-size: 30px;
         color: var(--textColor1);
         max-width: 60%;
@@ -47,32 +49,28 @@
 
 @media screen and (min-width: 512px) and (max-width: 972px) {
   .home-skill {
-    .skillList{
-      article{
+    .skillList {
+      article {
         min-width: 40%;
       }
     }
   }
-  
 }
-
-
 
 @media screen and (max-width: 512px) {
   .home-skill {
     margin-bottom: 100px;
-    .skillList{
-      article{
+    .skillList {
+      article {
         min-width: 45%;
         // padding: 6px 15px;
-        svg{
+        svg {
           font-size: 20px;
         }
-        b{
+        b {
           font-size: 20px;
         }
       }
     }
   }
-  
 }

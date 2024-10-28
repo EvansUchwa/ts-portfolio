@@ -54,13 +54,13 @@ const HomeWorks = () => {
       <SectionTitle title="Mes travaux" />
       <section>
         <CustomSelect
-          chooseLabel={"Filtre par techno"}
+          chooseLabel={"Filtre par technologies"}
           options={[
             { label: "Javascript(React Js)", value: "react" },
             { label: "Javascript(Next Js)", value: "next" },
             { label: "Typescript(Next Js)", value: "ts" },
             { label: "Node Js", value: "node" },
-            { label: "Toutes les technos", value: "all" },
+            { label: "Réinitialiser", value: "all" },
           ]}
           afterChange={handleChange}
         />
@@ -88,7 +88,7 @@ const HomeWorks = () => {
                   </div>
 
                   <LinkButton
-                    text={"Visitez"}
+                    text={"Consulter le projet"}
                     link={item.link}
                     target="_blank"
                   />

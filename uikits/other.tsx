@@ -76,7 +76,9 @@ export function CustomSelect({
             <li
               key={"option nb" + i}
               onClick={() => handleChange(item, i)}
-              className={currentOption == item.value ? "selected" : ""}
+              className={
+                "notranslate " + (currentOption == item.value ? "selected" : "")
+              }
             >
               {item.label}
             </li>

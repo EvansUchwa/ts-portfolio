@@ -80,8 +80,8 @@ export const technosIcons: technosIconType = {
 };
 
 export function getResumeLinkFromCookie() {
-  if (getCookie("googtrans")?.endsWith("en")) return "/resumes/en-resume.pdf";
-  return "/resumes/fr-resume.pdf";
+  if (getCookie("googtrans")?.endsWith("en")) return "/resumes/en.pdf";
+  return "/resumes/fr.pdf";
 }
 
 export function redirectToResume() {

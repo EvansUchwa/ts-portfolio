@@ -1,5 +1,6 @@
 import { redirectToResume } from "@/helpers/others";
 import { LinkButton, SectionTitle } from "../../uikits/other";
+import { onMenuLinkClick } from "@/uikits/Nav";
 const HomeAbout = () => {
   return (
     <div className="home-about" id="home-about">
@@ -12,29 +13,53 @@ const HomeAbout = () => {
           <h2>Un développeur web passionné !</h2>
 
           <p>
-            Passionné d'informatique et d'électronique depuis mon enfance , je
-            n'ai pas hésité après l'obtention de mon baccalauréat à me lancer
-            d'abord dans la programmation puis par la suite dans le
-            développement web . J'ai profité de l'obtention d'une bourse de
-            formation dans une université de chez moi pour me faire former en
-            développement web full-stack. Mon expérience acquise au fil des
-            projets me permet de mieux comprendre les attentes d'un client et de
-            répondre précisement au besoin demandé en fonction du domaine
-            d'activité . Du site vitrine au projet plus complexe , je vous
-            propose une expertise et un développement qui correspond à vos
-            attentes & à vos besoins. Et c'est dans l'optique de continuer à me
-            perfectionner que je suis disponible pour la création de vos site
-            internet (site vitrine, site e-commerce ou application web) , je
-            suis également disponible pour toute collaboration dans le domaine
-            du développement web. Ayant deja travailler régulièrement avec des
-            clients de bourse differente , je vous propose des solutions à votre
-            portée et adaptée à votre budget .
+            Passionné par le développement web et l'électronique depuis mon plus
+            jeune âge, j'ai toujours suivi une approche ambitieuse pour
+            progresser dans le domaine. Après mon baccalauréat, j'ai débuté par
+            la programmation en C, avant de me spécialiser dans le développement
+            web, principalement en JavaScript et TypeScript, tout en restant
+            ouvert à d'autres technologies. Bénéficiaire d'une bourse de
+            formation dans une université locale, j'ai pu renforcer mes
+            compétences en développement full-stack.
           </p>
-          <LinkButton
-            text={"Mon Cv"}
-            link={"/"}
-            onClick={() => redirectToResume()}
-          />
+
+          <p>
+            Aujourd'hui, avec plus de 4 ans d'expérience, j'ai eu l'opportunité
+            de travailler sur des projets variés, allant de sites vitrines à des
+            plateformes à fort trafic. Ma compréhension approfondie des attentes
+            clients me permet de proposer des solutions précises, adaptées à
+            chaque secteur d’activité. Grâce à cette expérience, je vous offre
+            une expertise professionnelle, capable de transformer vos idées en
+            sites web, plateformes e-commerce ou applications web répondant
+            exactement à vos besoins.
+          </p>
+
+          <p>
+            Fort de collaborations avec des clients de divers horizons et
+            budgets, je conçois des solutions accessibles et alignées avec vos
+            attentes. À travers cette démarche, je suis continuellement à la
+            recherche de nouveaux défis pour élargir mes compétences et apporter
+            des solutions novatrices. Si vous avez besoin d'un développeur
+            rigoureux pour créer ou améliorer votre projet web, ou si vous
+            souhaitez collaborer avec un professionnel engagé, n'hésitez pas à
+            me contacter.
+          </p>
+          <section className="flex">
+            <LinkButton
+              text={"Mon Cv"}
+              link={"/"}
+              onClick={() => redirectToResume()}
+            />
+            <LinkButton
+              text={"Mes travaux"}
+              link={"/#"}
+              datatype="home-work"
+              isOutline={true}
+              onClick={(e) => {
+                onMenuLinkClick(e);
+              }}
+            />
+          </section>
         </div>
       </div>
     </div>

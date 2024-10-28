@@ -51,7 +51,7 @@ export function GoogleTranslate() {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         observer.disconnect();
-        setAppLoader(false);
+        // setAppLoader(false);
       }, 600);
     });
 
@@ -110,7 +110,7 @@ function LanguageSelector({ onChange, value }: LanguageSelectorPropsType) {
         <span
           key={it.value}
           onClick={(e) => {
-            setAppLoader(true);
+            // setAppLoader(true);
             onChange(it.value);
           }}
           className={langCookie == it.value ? "isActive" : ""}
