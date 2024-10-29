@@ -77,7 +77,8 @@ export function CustomSelect({
               key={"option nb" + i}
               onClick={() => handleChange(item, i)}
               className={
-                "notranslate " + (currentOption == item.value ? "selected" : "")
+                (options.length - 1 == i ? "" : " notranslate ") +
+                (currentOption == item.value ? "selected" : "")
               }
             >
               {item.label}

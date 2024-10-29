@@ -22,6 +22,7 @@ const HomeWorks = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
+    variableHeight: true,
     customPaging: function (i: number): ReactElement {
       return <span>{i}</span>;
     },
