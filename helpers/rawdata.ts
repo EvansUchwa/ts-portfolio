@@ -49,6 +49,31 @@ export const works: WorkType[] = [
     technos: ["next", "sass", "github"],
   },
   {
+    name: "Oruhr International",
+    description:
+      "En tant que développeur de la version internationale du site Or & Uhr International, j'ai conçu une plateforme conviviale dédiée à l'achat et à la vente de métaux précieux. Le site propose un catalogue détaillé avec des descriptions précises et des prix actualisés en temps réel.Un formulaire de contact facilite les demandes de devis personnalisés. La conception adaptative assure une expérience optimale sur tous les appareils, reflétant mon engagement à allier esthétique, fonctionnalité et performance.",
+    img: "oruhr.webp",
+    link: "https://oruhrinternational.ch/",
+    technos: ["next", "sass", "docker"],
+  },
+  {
+    name: "Gold Wanted",
+    description:
+      "En tant que développeur de la version canadienne du site Gold Wanted, j'ai conçu une plateforme conviviale dédiée à l'achat et à la vente de métaux précieux. Le site propose un catalogue détaillé avec des descriptions précises et des prix actualisés en temps réel.Un formulaire de contact facilite les demandes de devis personnalisés. La conception adaptative assure une expérience optimale sur tous les appareils, reflétant mon engagement à allier esthétique, fonctionnalité et performance.",
+    img: "goldwanted.webp",
+    link: "https://goldwanted.ca/",
+    technos: ["next", "sass", "docker"],
+  },
+
+  {
+    name: "Cleopatra",
+    description:
+      "Une plateforme de rencontre pour adultes développée pour un client basé au Canada. Elle compte actuellement 4000 utilisateurs, dont 500 actifs.",
+    img: "cleopatra.webp",
+    link: "https://cleopatra.sx",
+    technos: ["react", "node", "mongo", "sass", "docker"],
+  },
+  {
     name: "Cleopatra",
     description:
       "Une plateforme de rencontre pour adultes développée pour un client basé au Canada. Elle compte actuellement 4000 utilisateurs, dont 500 actifs.",

@@ -19,6 +19,9 @@ import {
   SkillIconsPrisma,
   SkillIconsPostgresqlDark,
   SkillIconsPhpDark,
+  LogosRedis,
+  LogosRabbitmqIcon,
+  LogosPhp,
 } from "@/uikits/icons";
 import { getCookie } from "cookies-next";
 // {
@@ -63,7 +66,7 @@ export const technosIcons: technosIconType = {
   css: <SkillIconsCss />,
   js: <SkillIconsJavascript />,
   ts: <SkillIconsTypescript />,
-  php: <SkillIconsPhpDark />,
+  php: <LogosPhp />,
   sass: <SkillIconsSass />,
   react: <SkillIconsReactDark />,
   next: <SkillIconsNextjsLight />,
@@ -77,6 +80,8 @@ export const technosIcons: technosIconType = {
   node: <SkillIconsNodejsDark />,
   prisma: <SkillIconsPrisma />,
   postgresql: <SkillIconsPostgresqlDark />,
+  redis: <LogosRedis />,
+  rabbitmq: <LogosRabbitmqIcon />,
 };
 
 export function getResumeLinkFromCookie() {

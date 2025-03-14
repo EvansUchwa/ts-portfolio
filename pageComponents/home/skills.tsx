@@ -16,6 +16,8 @@ const HomeSkills = () => {
     { name: "MongoDb", icon: "mongo" },
     { name: "MySql", icon: "mysql" },
     { name: "Postgresql", icon: "postgresql" },
+    { name: "Redis", icon: "redis" },
+    { name: "RabbitMq", icon: "rabbitmq" },
     { name: "Github", icon: "github" },
     { name: "Gitlab", icon: "gitlab" },
     { name: "Docker", icon: "docker" },
@@ -24,23 +26,24 @@ const HomeSkills = () => {
   ];
 
   const frontEndTool = [
-    { name: "Html5", icon: "html" },
-    { name: "Css3", icon: "css" },
-    { name: "Sass", icon: "sass" },
-    { name: "Javascript", icon: "js" },
-    { name: "Typescript", icon: "ts" },
-    { name: "React", icon: "react" },
-    { name: "NextJs", icon: "next" },
+    techno[0],
+    techno[1],
+    techno[2],
+    techno[3],
+    techno[4],
+    techno[5],
+    techno[6],
   ];
 
   const backendTool = [
-    { name: "NextJs", icon: "next" },
-    { name: "NodeJs", icon: "node" },
-    { name: "Php", icon: "php" },
-    { name: "Prisma", icon: "prisma" },
-    { name: "MongoDb", icon: "mongo" },
-    { name: "MySql", icon: "mysql" },
-    { name: "Postgresql", icon: "postgresql" },
+    techno[7],
+    techno[8],
+    techno[9],
+    techno[10],
+    techno[11],
+    techno[12],
+    techno[13],
+    techno[14],
   ];
 
   const devopsTools = [
