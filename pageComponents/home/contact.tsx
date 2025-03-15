@@ -80,7 +80,7 @@ const HomeContact = () => {
             <span>
               <IcBaselineLocalPhone />
             </span>
-            +229 94677352
+            +229 01 94 67 73 52 /+229 01 46 45 11 95
           </p>
         </div>
         <section>
